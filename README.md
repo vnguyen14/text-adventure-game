@@ -29,11 +29,16 @@ A Text Adventure Game called Neighbourhood Crossing
 
 # Create a merge request (MR):
   - Once done pushing your changes, go to Github app.
-  - 
+  - You will likely see a banner at the top saying “your-branch-name had recent pushes some seconds ago” and a “Compare & pull request” green button. Click on that button.
+  - Add a title and description of what changes you are trying to merge into main.
+  - You’ll need an approval another team member to be able to merge to main. So send us the link to your merge/pull request to get approval.
+  - After being approved, hit the “Confirm Merge” green button.
+  - Done!
 
-# Working locally and pushing to remote:
+# Rules when working locally and pushing to remote:
 Once you've safely opened the project in VS Code and ready to start coding, PLEASE pay attention to these things beforehand:
   - NEVER, ever, work direct in the main branch (it's literally called main, you can not confuse it with anything else).
   - Thus, ALWAYS, the very first thing you need to do before coding anything, is to ALWAYS check which branch you are currently in. To do that, just look at the left corner of your VS Code window, where there is a blue button and next to it, is a fork looking icon with the name of the current branch you are in right next to the fork. If it says "main", immediately do a git checkout to a new branch.
-  - DO NOT name any of your new branch as "main" or "master". It's obvious enough but just in case...
+  - DO NOT name any of your new branch as "main" or "master". It's obvious enough but just in case... (git also won't allow branches with same name anyway).
+  - DO NOT leave any console log for debug purposed in your code before commit.
   - 
