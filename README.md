@@ -18,7 +18,7 @@ A Text Adventure Game called Neighbourhood Crossing
   - Type "code ." to open up the project in VS Code.
 
 # Add, commit and push new changes:
-  - Type "git checkout -b name-of-your-new-branch" to move to a new branch if you are in "main" or "master". NEVER EVER work in main or master. the branch name cannot include space or special characters. It's recommended to seperate words with a dash (ex: add-flower-store-room).
+  - Type "git checkout -b name-of-your-new-branch" to move to a new branch if you are in "main" or "master". NEVER EVER work in main or master. The branch name cannot include space or special characters. It's recommended to seperate words with a dash (ex: add-flower-store-room).
   - Once in your new branch, ALWAYS type "git pull origin main" to pull all new changes everyone else has made from main into your new branch BEFORE you start making changes to avoid merge conflicts later.
   - Make all you changes, start coding, all that.
   - Type "git status" every once in a while to check all the changes you made.
