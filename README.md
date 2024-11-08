@@ -26,7 +26,7 @@ A Text Adventure Game called Neighbourhood Crossing
     (No sign is good sign, or you can type "git status" again to make sure no changes have not been added. Git will tell you with a very clear message.)
   - Type <git commit -m "Your commit message - just say what you did here"> to commit your changes (do not include the  <> sign, but DO include the quotes for your message in the command).
     If you get the error "Author identity unknown..." the first time you commit, just follow Git's instructions on what to do and you'll be fine. If Git tells you to run something, run it and provide your credentials, you should be good to go!
-  - Again, no sign is good sign. Type "git push origin <your-branch-name>" to push your changes to remote (do not include the quotes and <> in the command).
+  - Again, no sign is good sign. Type "git push origin < your-branch-name >" to push your changes to remote (do not include the quotes and <> in the command).
 
 # Create a merge request (MR):
   - Once done pushing your changes, go to Github website.
