@@ -1,0 +1,44 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Mrs. Henderson",
+      "description": "Mrs. Henderson is the friendly librarian who loves helping others find books. She is knowledgeable about flowers and photography.",
+      "roomID": 2,
+      "dialogues": [
+        {
+          "id": 1,
+          "action_id": 1,
+          "message": "Welcome to the library! How can I assist you today?"
+        },
+        {
+          "id": 2,
+          "action_id": 1,
+          "message": "If you're interested in flowers, I have just the book for you! It's a fantastic guide."
+        },
+        {
+          "id": 3,
+          "action_id": 1,
+          "message": "Oh, you need a battery for your camera? Let's find it together!"
+        },
+        {
+          "id": 4,
+          "action_id": 1,
+          "message": "Don't hesitate to come back if you need more help!"
+        }
+      ],
+      "items": [
+        {
+          "item_id": 1,
+          "action_id": 2,
+          "message_id": 1
+        },
+        {
+          "item_id": 2,
+          "action_id": 2,
+          "message_id": 3
+        }
+      ]
+    }
+  ]
+}

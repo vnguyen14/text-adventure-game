@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "What in Carnations? A Guide to Flowers",
+      "description": [
+        {
+          "text": "You flip the book open, revealing fascinating details of every flower, including the following:"
+        },
+        {
+          "type": "Rose",
+          "color": "Red",
+          "size": "Medium",
+          "scent": "Strong",
+          "symbol": "R"
+        },
+        {
+          "type": "Gardenia",
+          "color": "White",
+          "size": "Large",
+          "scent": "Strong",
+          "symbol": "G"
+        },
+        {
+          "type": "Daisy",
+          "color": "White",
+          "size": "Medium",
+          "scent": "Light",
+          "symbol": "D"
+        },
+        {
+          "type": "Lavender",
+          "color": "Purple",
+          "size": "Small",
+          "scent": "Strong",
+          "symbol": "L"
+        },
+        {
+          "type": "Sunflower",
+          "color": "Yellow",
+          "size": "Large",
+          "scent": "Light",
+          "symbol": "S"
+        },
+        {
+          "type": "Tulip",
+          "color": "Red",
+          "size": "Medium",
+          "scent": "Light",
+          "symbol": "T"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Camera Battery",
+      "description": ["A compact, rechargeable battery designed to power any camera."]
+    }
+  ]
+}
