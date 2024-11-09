@@ -11,16 +11,7 @@ class Item:
     def __str__(self):
         return self.name.capitalize()
 
-    def take(self):
-        return f"{self.name.capitalize()} is now in your {self.get_location()}!"
-
-    def get_location(self):
-        # Decide the default location for specific items
-        return "pocket" if self.name in ["keys", "phone"] else "bag"
-    
-    def inspect(self):
-        return self.description
-
+    # Method to get all items from items.json
     @staticmethod
     def load_items(filename):
         # Get the path to the Assets folder and load items.json file

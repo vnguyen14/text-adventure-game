@@ -9,6 +9,7 @@ class Room:
         self.shortDescription = shortDescription
         self.connections = connections
 
+    # Method to get all rooms from rooms.json
     @staticmethod
     def load_rooms(filename):
         # Use the absolute path to Assets folder
@@ -27,8 +28,10 @@ class Room:
             rooms[room.id] = room
         return rooms
 
+    # Method to print long description
     def print_long_description(self):
         print(self.longDescription)
 
+    # Method to print short description
     def print_short_description(self):
         print(self.shortDescription)
