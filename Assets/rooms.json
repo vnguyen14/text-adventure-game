@@ -6,19 +6,46 @@
       "longDescription": "You are in your small and cozy home. The bed is soft and inviting, but the alarm clock is going off, signaling the start of a new day . Waking up with a refreshed mind, you start getting ready for the day. You brush your teeth, get dressed, and enjoy some light breakfast and coffee. Don’t forget to collect all your necessary items before leaving the house!",
       "shortDescription": "You woke up and start to get ready for the day after collecting all necessary items.",
       "connections": [
-        4,
-        2
+        {
+          "direction": "s",
+          "roomID": 2
+        },
+        {
+          "direction": "w",
+          "roomID": 3
+        }
       ]
     },
-    {
+    { 
       "id": 2,
       "name": "Bakery",
       "longDescription": "Starting off bright and early in the morning, you were asked urgently by the owner of the local Bake Goods shop if you could help them pick up some last-minute groceries for a big order as one of their workers fell sick. You were provided a list, but as someone who barely ever made dessert, the task seemed a bit harder than how you had imagined. What problem would you have to solve in order to finish the task in time for the bakers to start making their order?",
       "shortDescription": "You’re in the town’s Baked Goods shop. The owner Jeremy has asked for your help in some last-minute shopping for a big order, but the task list turns out to be more complicated than it seems.",
       "connections": [
-        1,
-        3,
-        5
+        {
+          "direction": "w",
+          "roomID": 3
+        },
+        {
+          "direction": "e",
+          "roomID": 8
+        }
+      ]
+    },
+    { 
+      "id": 3,
+      "name": "Florence’s Flower Shop",
+      "longDescription": "You are in a flower shop. The walls are lined with shelves adorned with vibrant blooms. In the center, a large wooden table is strewn with sharp shears, spools of twine, and rolls of wrapping paper. Behind the table, Florence, the florist, moves with frantic purpose. Nearby, a chalkboard displays a large order with scratched-out ideas and half-erased notes.",
+      "shortDescription": "You are in a flower shop. A frantic florist crafts arrangements at a cluttered table. A chalkboard of scratched-out ideas is nearby.",
+      "connections": [
+        {
+          "direction": "e",
+          "roomID": 2
+        },
+        {
+          "direction": "s",
+          "roomID": 4
+        }
       ]
     }
   ]

@@ -10,7 +10,7 @@ def start_home_room(room, items):
     available_items = get_items_in_room(room.id, items)
     print(f"Items in this room: {[item.name for item in available_items]}")
 
-#Helper function to get all items in this room
+# Helper function to get all items in this room
 def get_items_in_room(room_id, items):
     return [item for item in items.values() if room_id in item.location] # only get items with home's roomID
 
@@ -59,7 +59,5 @@ def process_home_command(command, room, items):
         take_item(item_name, room.id, items)
     elif action == "inspect" and item_name == "phone":
         inspect_phone()
-    elif action in ["look", "description"]:
-        start_home_room(room, items)
     else:
         print("I don't understand that command.")

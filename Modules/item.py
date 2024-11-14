@@ -3,10 +3,13 @@ import json
 from pathlib import Path
 
 class Item:
-    def __init__(self, name, description, location):
+    def __init__(self, id, name, description, location, content):
+        self.id = id
         self.name = name
         self.description = description
         self.location = location
+        self.content = content
+        
 
     def __str__(self):
         return self.name.capitalize()
@@ -21,6 +24,6 @@ class Item:
 
         items = {}
         for item_data in data["items"]:
-            item = Item(item_data["name"], item_data["description"], item_data["location"])
+            item = Item(item_data["id"], item_data["name"], item_data["description"], item_data["location"], item_data["content"])
             items[item_data["name"].lower()] = item  # Store the item instance by name
         return items
