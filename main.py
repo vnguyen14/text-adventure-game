@@ -1,21 +1,51 @@
 from Modules.room import Room
-from game_engine import home_logic
+from game_engine import home_logic, flowerShop_logic
 from Modules.item import Item  # Import the Item class
 
 # Load rooms and items data from json files
 rooms = Room.load_rooms('rooms.json')
 items = Item.load_items('items.json')
 
-# Get home room from rooms: next() find the first room where name == 'Home' and stop there
-home_room = next(room for room in rooms.values() if room.name == "Home")
+# Get current room from rooms: next() find the first room where name == 'Home' and stop there
+global current_room
+current_room = next(room for room in rooms.values() if room.name == "Home")
 
-# Start the day in the Home room
-home_logic.start_home_room(home_room, items)
+# Start the game in the Home room
+home_logic.start_home_room(current_room, items)
 
-# Game loop for user's commands/actions in Home
+# Function to move between rooms
+def move_player(direction):
+    """Moves the player in the specified direction if a connection exists."""
+    global current_room
+    for connection in current_room.connections:
+        if connection["direction"] == direction:
+            new_room_id = connection["roomID"]
+            current_room = rooms[new_room_id]
+            enter_room()
+            return
+    print("You can't go that way.")
+
+# Helper function to move rooms: start the room logic once the player enter the room
+def enter_room():
+    """Displays the appropriate room details and starts room-specific logic."""
+    if current_room.name == "Florence’s Flower Shop":
+        flowerShop_logic.start_flower_shop(current_room, items)
+    else:
+        home_logic.start_home_room(current_room, items)
+
+
+# Game loop for user's commands/actions
 while True:
-    command = input("> ")
+    command = input("> ").strip().lower()
     if command in ["quit", "exit"]:
         print("Thanks for playing!")
         break
-    home_logic.process_home_command(command, home_room, items)
+    elif command in ["n", "s", "e", "w"]:
+        move_player(command)
+    elif current_room.name == "Home":
+        home_logic.process_home_command(command, current_room, items)
+    elif current_room.name == "Florence’s Flower Shop":
+        flowerShop_logic.process_flower_shop_command(command, current_room, items)
+    else:
+        print("Invalid command.")
+
