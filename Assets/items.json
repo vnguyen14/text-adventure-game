@@ -68,6 +68,13 @@
           "scent": "Mild"
         }
       }
+    },
+    {
+      "id": 5,
+      "name": "Sophia's Lavender Pie Recipe",
+      "description": "",
+      "location": [1],
+      "content": {}
     }
   ]
 }

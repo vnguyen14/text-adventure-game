@@ -17,6 +17,13 @@
           "message_id": 3
         }
       ]
+    },
+    {
+      "id": 2,
+      "name": "Dina",
+      "description": "Dina is the owner of the neighborhood restaurant and Sophia's granddaughter.\n",
+      "roomID": 2,
+      "items": []
     }
   ]
 }
