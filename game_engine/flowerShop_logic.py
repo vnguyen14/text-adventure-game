@@ -1,4 +1,5 @@
 from Modules.item import Item
+from Modules.riddle import Riddle
 from itertools import combinations
 
 collected_items = []
@@ -8,13 +9,18 @@ arrangement_count = 0
 # Correct flower arrangements
 valid_arrangements = []
 
+riddle_data = {}
+
 
 # Start the room
 def start_flower_shop(room, items):
-    """Prints the long description of the flower shop and shows available items."""
+    """Prints the long description of the flower shop, get riddle data and shows available items."""
     global valid_arrangements
+    global riddle_data
+
     room.print_long_description()
-    available_items = get_items_in_room(room.id, items)
+    available_items = Item.get_items_in_room(room.id, items)
+    riddle_data = Riddle.get_riddle_by_room(room.id)
     valid_arrangements = generate_valid_arrangements(room, available_items)
     print(f"Items in this room: {[item.name for item in available_items]}")
 
@@ -46,6 +52,7 @@ def generate_valid_arrangements(room, items):
 
 # Function for solving puzzle logic
 def solve_arrangement(arrangement):
+    print(valid_arrangements)
     """Checks if the player's arrangement matches Florence's criteria."""
     global arrangement_count
 
@@ -65,12 +72,6 @@ def solve_arrangement(arrangement):
         print("Sorry, that doesn’t work!")
 
 
-# Helper function to get all items in this room
-def get_items_in_room(room_id, items):
-    """Returns items available in the room."""
-    return [item for item in items.values() if room_id in item.location]
-
-
 # Helper function to talk to Florence
 def talk_to_florence():
     """Handles dialog with Florence."""
@@ -82,19 +83,9 @@ def talk_to_florence():
 # Helper function to help Florence
 def help_florence():
     """Florence shares her bouquet requirements."""
-    print("""Thank you so much! Let me share some instructions with you.
-    
-    Each arrangement must have exactly three different types of flowers of different colors.
-    Red flowers can be paired with yellow, purple and white flowers.
-    Yellow flowers can be paired with red and white flowers.
-    Blue flowers can be paired with purple and white flowers.
-    Purple flowers can be paired with red, blue, and white flowers.
-    White flowers can be paired with any color except other white flowers.
-    Each arrangement must have at least two different sizes.
-    Each arrangement cannot have more than one large flower.
-    Each arrangement cannot have more than one strongly scented type of flower.
-    
-I keep a book of all the flowers we have in store, it's called 'What in Carnations? A guide to flowers', please feel free to take a look at it. Let me know if you found any good arrangement by saying the flowers' symbols, I'll let yoy know right away if the arrangement works!""")
+    print("Thank you so much! Let me share some instructions with you.")
+    print(f"\033[1m{riddle_data['riddle']}\033[0m")  # Print the riddle from the JSON file
+    print("I keep a book of all the flowers we have in store, it's called 'What in Carnations? A guide to flowers', please feel free to take a look at it. Let me know if you found any good arrangement by saying the flowers' symbols, I'll let yoy know right away if the arrangement works!")
 
 
 # Helper function to display information from the flower guide book 

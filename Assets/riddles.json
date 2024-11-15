@@ -1,52 +1,16 @@
 {
   "riddles": [
     {
-      "id": 1,
-      "riddles": [
-        "I’m yellow and smooth, often spread on toast. I melt when it’s warm, and in batter, I boast."
-      ],
-      "answers": [
-        "Butter"
-      ],
-      "room_id": 2,
-      "success_dialogues": [
-        "Congratulations! You have successfully solved all the riddles and got all ingredients for the bakery!",
-        "Perfect! Let's move on to the next ingredient!"
-      ],
-      "failure_dialogues": [
-        "Sorry, that is not the right answer!",
-        "Please try another answer!"
-      ]
-    },
-    {
       "id": 3,
-      "riddles": [
-        "Each arrangement must have exactly three different types of flowers of different colors.",
-        "Red flowers can be paired with yellow, purple and white flowers.",
-        "Yellow flowers can be paired with red and white flowers.",
-        "Blue flowers can be paired with purple and white flowers.",
-        "Purple flowers can be paired with red, blue, and white flowers.",
-        "White flowers can be paired with any color except other white flowers.",
-        "Each arrangement must have at least two different sizes.",
-        "Each arrangement cannot have more than one large flower.",
-        "Each arrangement cannot have more than one strongly scented type of flower."
-      ],
+      "riddle": "\n Each arrangement must have exactly three different types of flowers of different colors.\n Red flowers can be paired with yellow, purple and white flowers.\n Yellow flowers can be paired with red and white flowers.\n Blue flowers can be paired with purple and white flowers.\n Purple flowers can be paired with red, blue, and white flowers.\n White flowers can be paired with any color except other white flowers.\n Each arrangement must have at least two different sizes.\n Each arrangement cannot have more than one strongly scented type of flower.\n",
       "answers": [
         "RDS",
         "DLH",
         "DST"
       ],
-      "room_id": 4,
-      "success_dialogues": [
-        "Nice! I need two more arrangements!",
-        "We’re almost there. Just one more arrangement!",
-        "Perfect! We pulled it off for the festival!"
-      ],
-      "failure_dialogues": [
-        "Sorry, that arrangement doesn’t work!",
-        "You can’t have more than one large flower.",
-        "You can’t have more than one strongly scented flower."
-      ]
+      "room_id": 3,
+      "success_dialogues": [],
+      "failure_dialogues": []
     }
   ]
 }

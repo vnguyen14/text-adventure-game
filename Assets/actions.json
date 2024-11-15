@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "talk",
-      "item_id": null,
+      "item_id": [],
       "character_id": [
         1
       ]
@@ -11,11 +11,7 @@
     {
       "id": 2,
       "name": "take",
-      "item_id": [
-        1,
-        2,
-        3
-      ],
+      "item_id": [1, 2, 3],
       "character_id": [
         1
       ]
@@ -23,11 +19,7 @@
     {
       "id": 3,
       "name": "inspect",
-      "item_id": [
-        1,
-        2,
-        3
-      ],
+      "item_id": [1, 4],
       "character_id": null
     }
   ]
