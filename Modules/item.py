@@ -27,3 +27,7 @@ class Item:
             item = Item(item_data["id"], item_data["name"], item_data["description"], item_data["location"], item_data["content"])
             items[item_data["name"].lower()] = item  # Store the item instance by name
         return items
+
+    # Method to return items available for each room
+    def get_items_in_room(room_id, items):
+        return [item for item in items.values() if room_id in item.location]
