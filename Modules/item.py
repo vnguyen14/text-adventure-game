@@ -24,8 +24,13 @@ class Item:
 
         items = {}
         for item_data in data["items"]:
-            item = Item(item_data["id"], item_data["name"], item_data["description"], item_data["location"], item_data["content"])
-            items[item_data["name"].lower()] = item  # Store the item instance by name
+            item = Item(
+                item_data["id"],
+                item_data["name"],
+                item_data["description"],
+                item_data["location"],
+                item_data["content"])
+            items[item.id] = item  # Store the item instance by id
         return items
 
     # Method to return items available for each room
