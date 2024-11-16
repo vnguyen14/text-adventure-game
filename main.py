@@ -1,10 +1,12 @@
 from Modules.room import Room
 from game_engine import home_logic, flowerShop_logic, restaurant_logic
-from Modules.item import Item  # Import the Item class
+from Modules.item import Item
+from Modules.action import Action
 
-# Load rooms and items data from json files
+# Load rooms, actions and items data from json files
 rooms = Room.load_rooms('rooms.json')
 items = Item.load_items('items.json')
+actions = Action.load_actions("actions.json")
 
 # Get current room from rooms: next() find the first room where name == 'Home' and stop there
 global current_room
@@ -42,6 +44,9 @@ while True:
     if command in ["quit", "exit"]:
         print("Thanks for playing!")
         break
+    elif command == "man":
+        manual = Action.print_game_manual(actions)
+        print(manual) #display manual
     elif command in ["n", "s", "e", "w"]:
         move_player(command)
     elif current_room.name == "Home":

@@ -3,24 +3,42 @@
     {
       "id": 1,
       "name": "talk",
+      "description": "Engage in conversation with characters.",
+      "target_type": "character",
       "item_id": [],
-      "character_id": [
-        1
-      ]
+      "character_id": [1]
     },
     {
       "id": 2,
       "name": "take",
+      "description": "Pick up items in the room.",
+      "target_type": "item",
       "item_id": [1, 2, 3],
-      "character_id": [
-        1
-      ]
+      "character_id": []
     },
     {
       "id": 3,
       "name": "inspect",
+      "description": "Examine items closely for details.",
+      "target_type": "item",
       "item_id": [1, 4],
-      "character_id": null
+      "character_id": []
+    },
+    {
+      "id": 4,
+      "name": "help",
+      "description": "Offer assistance to characters in need.",
+      "target_type": "character",
+      "item_id": [],
+      "character_id": [1]
+    },
+    {
+      "id": 5,
+      "name": "man",
+      "description": "Display the game manual.",
+      "target_type": "none",
+      "item_id": [],
+      "character_id": []
     }
   ]
 }
