@@ -1,8 +1,10 @@
+'''
 import sys
 import os
 
 # Add the project root directory to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+'''
 
 from Modules.room import Room
 from Modules.item import Item
@@ -48,7 +50,9 @@ def take_item(item_name, available_items):
         print("Mrs. Henderson: Sorry dear, I couldn't find that item in the library.")
 
 # Helper function to process user's commands from the prompt/terminal
-def process_library_command(command, library, available_items):
+def process_library_command(command, library, items):
+    available_items = Item.get_items_in_room(library.id, items)
+    
     words = command.lower().split()
     action = words[0]
     parameter = ' '.join(words[1:]) if len(words) > 1 else None
@@ -63,21 +67,22 @@ def process_library_command(command, library, available_items):
         print("I don't understand that command.")
 
 # Start the room
-def start_library_room():
-    library = rooms[5]
+def start_library(current_room, items):
+    # library = rooms[5]
     # Create list of items currently in room
-    available_items = Item.get_items_in_room(library.id, items)
+    # available_items = Item.get_items_in_room(current_room.id, items)
     # Print long or short description depending on visited status
-    library.print_description()
+    current_room.print_description()
 
+'''
+# Test for running isolated room
     while True:
         command = input("\n> ").strip()
         if command.lower() in ["quit", "exit"]:
             print("Goodbye!")
             break
-        process_library_command(command, library, available_items)
+        process_library_command(command, current_room, available_items)
 
-# Run the game
 if __name__ == "__main__":
     # Dynamically determine paths to assets
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -87,4 +92,5 @@ if __name__ == "__main__":
     rooms = Room.load_rooms(os.path.join(assets_dir, 'rooms.json'))
     items = Item.load_items(os.path.join(assets_dir, 'items.json'))
 
-    start_library_room()
+    start_library()
+'''
