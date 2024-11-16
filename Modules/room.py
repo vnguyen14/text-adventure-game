@@ -29,6 +29,14 @@ class Room:
             rooms[room.id] = room
         return rooms
 
+    # Method to print description
+    def print_description(self):
+        if self.first_time_in_room:
+            print(self.longDescription)
+            self.first_time_in_room = False
+        else:
+            print(self.shortDescription)
+
     # Method to print long description
     def print_long_description(self):
         print(self.longDescription)

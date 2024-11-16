@@ -9,10 +9,6 @@
         {
           "direction": "s",
           "roomID": 2
-        },
-        {
-          "direction": "w",
-          "roomID": 3
         }
       ]
     },
@@ -56,11 +52,75 @@
       "connections": [
         {
           "direction": "n",
-          "roomID": 5
+          "roomID": 6
+        },
+        {
+          "direction": "e",
+          "roomID": 8
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Lore Library",
+      "longDescription": "You are in Lore Library. Towering shelves stretch from front to back, brimming with centuries of knowledge and boundless imagination. The inviting atmosphere encourages you to explore the countless stories waiting to be discovered. The quiet ambiance enhances the serenity of the space, making it a perfect haven for readers and dreamers alike. Near the front door, Mrs. Henderson, the librarian, expertly assists those seeking a specific title.",
+      "shortDescription": "You are in Lore Library. Mrs. Henderson, the librarian, skillfully helps visitors find the titles they're looking for.",
+      "connections": [
+        {
+          "direction": "n",
+          "roomID": 3
         },
         {
           "direction": "e",
           "roomID": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Neighbour's House",
+      "longDescription": "",
+      "shortDescription": "",
+      "connections": [
+        {
+          "direction": "w",
+          "roomID": 5
+        },
+        {
+          "direction": "s",
+          "roomID": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Restaurant",
+      "longDescription": "",
+      "shortDescription": "",
+      "connections": [
+        {
+          "direction": "n",
+          "roomID": 6
+        },
+        {
+          "direction": "e",
+          "roomID": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Retirement Home",
+      "longDescription": "",
+      "shortDescription": "",
+      "connections": [
+        {
+          "direction": "s",
+          "roomID": 7
+        },
+        {
+          "direction": "e",
+          "roomID": 2
         }
       ]
     }
