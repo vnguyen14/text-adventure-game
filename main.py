@@ -1,5 +1,5 @@
 from Modules.room import Room
-from game_engine import home_logic, flowerShop_logic
+from game_engine import home_logic, flowerShop_logic, restaurant_logic
 from Modules.item import Item  # Import the Item class
 
 # Load rooms and items data from json files
@@ -30,6 +30,8 @@ def enter_room():
     """Displays the appropriate room details and starts room-specific logic."""
     if current_room.name == "Florence’s Flower Shop":
         flowerShop_logic.start_flower_shop(current_room, items)
+    elif current_room.name == "Dina's Diner":
+        restaurant_logic.start_restaurant(current_room)
     else:
         home_logic.start_home_room(current_room, items)
 

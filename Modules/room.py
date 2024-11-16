@@ -8,6 +8,7 @@ class Room:
         self.longDescription = longDescription
         self.shortDescription = shortDescription
         self.connections = connections
+        self.first_time_in_room = True  # Track if this is the first time the player enters the room
 
     # Method to get all rooms from rooms.json
     @staticmethod
@@ -35,3 +36,7 @@ class Room:
     # Method to print short description
     def print_short_description(self):
         print(self.shortDescription)
+
+    def change_first_time_status(self):
+        self.first_time_in_room = False
+

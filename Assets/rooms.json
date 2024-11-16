@@ -47,6 +47,22 @@
           "roomID": 4
         }
       ]
+    },
+    {
+      "id": 4,
+      "name": "Dina's Diner",
+      "longDescription": "You are in Dina’s Diner, the neighborhood restaurant. The aroma of freshly brewed coffee mingles with the sweet scent of pie cooling in the back.The classic checkerboard floors feels like a nostalgic trip back in time and the red vinyl booths invite you to sink in. Behind the counter, you spot Dina, scurrying around as if searching for something.",
+      "shortDescription": "You are in Dina’s Diner, the neighborhood restaurant. The owner scurries around looking for something.",
+      "connections": [
+        {
+          "direction": "n",
+          "roomID": 5
+        },
+        {
+          "direction": "e",
+          "roomID": 6
+        }
+      ]
     }
   ]
 }
