@@ -3,16 +3,12 @@
     {
       "id": 1,
       "name": "Home",
-      "longDescription": "You are in your small and cozy home. The bed is soft and inviting, but the alarm clock is going off, signaling the start of a new day . Waking up with a refreshed mind, you start getting ready for the day. You brush your teeth, get dressed, and enjoy some light breakfast and coffee. Don’t forget to collect all your necessary items before leaving the house!",
+      "longDescription": "You are in your small and cozy home. The bed is soft and inviting, but the alarm clock is going off, signaling the start of a new day . Waking up with a refreshed mind, you start getting ready for the day. You brush your teeth, get dressed, and enjoy some light breakfast and coffee. Don't forget to collect all your necessary items before leaving the house!",
       "shortDescription": "You woke up and start to get ready for the day after collecting all necessary items.",
       "connections": [
         {
           "direction": "s",
           "roomID": 2
-        },
-        {
-          "direction": "w",
-          "roomID": 3
         }
       ]
     },
@@ -20,7 +16,7 @@
       "id": 2,
       "name": "Bakery",
       "longDescription": "Starting off bright and early in the morning, you were asked urgently by the owner of the local Bake Goods shop if you could help them pick up some last-minute groceries for a big order as one of their workers fell sick. You were provided a list, but as someone who barely ever made dessert, the task seemed a bit harder than how you had imagined. What problem would you have to solve in order to finish the task in time for the bakers to start making their order?",
-      "shortDescription": "You’re in the town’s Baked Goods shop. The owner Jeremy has asked for your help in some last-minute shopping for a big order, but the task list turns out to be more complicated than it seems.",
+      "shortDescription": "You're in the town's Baked Goods shop. The owner Jeremy has asked for your help in some last-minute shopping for a big order, but the task list turns out to be more complicated than it seems.",
       "connections": [
         {
           "direction": "w",
@@ -34,7 +30,7 @@
     },
     { 
       "id": 3,
-      "name": "Florence’s Flower Shop",
+      "name": "Florence's Flower Shop",
       "longDescription": "You are in a flower shop. The walls are lined with shelves adorned with vibrant blooms. In the center, a large wooden table is strewn with sharp shears, spools of twine, and rolls of wrapping paper. Behind the table, Florence, the florist, moves with frantic purpose. Nearby, a chalkboard displays a large order with scratched-out ideas and half-erased notes.",
       "shortDescription": "You are in a flower shop. A frantic florist crafts arrangements at a cluttered table. A chalkboard of scratched-out ideas is nearby.",
       "connections": [
@@ -51,16 +47,80 @@
     {
       "id": 4,
       "name": "Dina's Diner",
-      "longDescription": "You are in Dina’s Diner, the neighborhood restaurant. The aroma of freshly brewed coffee mingles with the sweet scent of pie cooling in the back.The classic checkerboard floors feels like a nostalgic trip back in time and the red vinyl booths invite you to sink in. Behind the counter, you spot Dina, scurrying around as if searching for something.",
-      "shortDescription": "You are in Dina’s Diner, the neighborhood restaurant. The owner scurries around looking for something.",
+      "longDescription": "You are in Dina's Diner, the neighborhood restaurant. The aroma of freshly brewed coffee mingles with the sweet scent of pie cooling in the back.The classic checkerboard floors feels like a nostalgic trip back in time and the red vinyl booths invite you to sink in. Behind the counter, you spot Dina, scurrying around as if searching for something.",
+      "shortDescription": "You are in Dina's Diner, the neighborhood restaurant. The owner scurries around looking for something.",
       "connections": [
         {
           "direction": "n",
-          "roomID": 5
+          "roomID": 6
+        },
+        {
+          "direction": "e",
+          "roomID": 8
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Lore Library",
+      "longDescription": "You are in Lore Library. Towering shelves stretch from front to back, brimming with centuries of knowledge and boundless imagination. The inviting atmosphere encourages you to explore the countless stories waiting to be discovered. The quiet ambiance enhances the serenity of the space, making it a perfect haven for readers and dreamers alike. Near the front door, Mrs. Henderson, the librarian, expertly assists those seeking a specific title.",
+      "shortDescription": "You are in Lore Library. Mrs. Henderson, the librarian, skillfully helps visitors find the titles they're looking for.",
+      "connections": [
+        {
+          "direction": "n",
+          "roomID": 3
         },
         {
           "direction": "e",
           "roomID": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Neighbour's House",
+      "longDescription": "",
+      "shortDescription": "",
+      "connections": [
+        {
+          "direction": "w",
+          "roomID": 5
+        },
+        {
+          "direction": "s",
+          "roomID": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Restaurant",
+      "longDescription": "",
+      "shortDescription": "",
+      "connections": [
+        {
+          "direction": "n",
+          "roomID": 6
+        },
+        {
+          "direction": "e",
+          "roomID": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Retirement Home",
+      "longDescription": "",
+      "shortDescription": "",
+      "connections": [
+        {
+          "direction": "s",
+          "roomID": 7
+        },
+        {
+          "direction": "e",
+          "roomID": 2
         }
       ]
     }

@@ -25,7 +25,7 @@
       "id": 4,
       "name": "What in Carnations? A guide to flowers book",
       "description": "Flower Type | Symbol | Scent  | Size   | Colour\n- Roses      | R      | Strong | Medium | Red\n- Gardenias  | G      | Strong | Large  | White\n- Daisies    | D      | Light  | Medium | White\n- Lavenders  | L      | Strong | Small  | Purple\n- Sunflowers | S      | Light  | Large  | Yellow\n- Tulips     | T      | Light  | Medium | Red\n- Hydrangeas | H      | Light  | Large  | Blue",
-      "location": [3],
+      "location": [5],
       "content": {
         "R": {
           "id": 1,
@@ -74,6 +74,27 @@
       "name": "Sophia's Lavender Pie Recipe",
       "description": "",
       "location": [1],
+      "content": {}
+    },
+    {
+      "id": 6,
+      "name": "Camera Battery",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 7,
+      "name": "Old Bookmark",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 8,
+      "name": "Ink Pen",
+      "description": "",
+      "location": [5],
       "content": {}
     }
   ]
