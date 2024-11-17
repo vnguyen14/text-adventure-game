@@ -33,6 +33,14 @@
       "character_id": [1]
     },
     {
+      "id": 4,
+      "name": "arrange",
+      "description": "Arrange the perfect bouquet of flowers.",
+      "target_type": "character",
+      "item_id": [],
+      "character_id": [1]
+    },
+    {
       "id": 5,
       "name": "man",
       "description": "Display the game manual.",
