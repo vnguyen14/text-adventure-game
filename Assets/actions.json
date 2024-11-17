@@ -33,7 +33,7 @@
       "character_id": [1]
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "arrange",
       "description": "Arrange the perfect bouquet of flowers.",
       "target_type": "character",
@@ -41,7 +41,7 @@
       "character_id": [1]
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "man",
       "description": "Display the game manual.",
       "target_type": "none",
