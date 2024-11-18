@@ -1,0 +1,101 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Phone",
+      "description": "",
+      "location": [1],
+      "content": {}
+    },
+    {
+      "id": 2,
+      "name": "Keys",
+      "description": "",
+      "location": [1],
+      "content": {}
+    },
+    {
+      "id": 3,
+      "name": "Wallet",
+      "description": "",
+      "location": [1],
+      "content": {}
+    },
+    {
+      "id": 4,
+      "name": "What in Carnations? A guide to flowers book",
+      "description": "Flower Type | Symbol | Scent  | Size   | Colour\n- Roses      | R      | Strong | Medium | Red\n- Gardenias  | G      | Strong | Large  | White\n- Daisies    | D      | Light  | Medium | White\n- Lavenders  | L      | Strong | Small  | Purple\n- Sunflowers | S      | Light  | Large  | Yellow\n- Tulips     | T      | Light  | Medium | Red\n- Hydrangeas | H      | Light  | Large  | Blue",
+      "location": [3, 5],
+      "content": {
+        "R": {
+          "id": 1,
+          "name": "Rose",
+          "symbol": "R",
+          "size": "Small",
+          "color": "Red",
+          "scent": "Strong"
+        },
+        "D": {
+          "id": 2,
+          "name": "Daisy",
+          "symbol": "D",
+          "size": "Large",
+          "color": "Yellow",
+          "scent": "Mild"
+        },
+        "T": {
+          "id": 3,
+          "name": "Tulip",
+          "symbol": "T",
+          "size": "Small",
+          "color": "Purple",
+          "scent": "Mild"
+        },
+        "L": {
+          "id": 4,
+          "name": "Lavender",
+          "symbol": "L",
+          "size": "Small",
+          "color": "Purple",
+          "scent": "Strong"
+        },
+        "S": {
+          "id": 5,
+          "name": "Sunflower",
+          "symbol": "S",
+          "size": "Large",
+          "color": "Yellow",
+          "scent": "Mild"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "name": "Sophia's Lavender Pie Recipe",
+      "description": "",
+      "location": [1],
+      "content": {}
+    },
+    {
+      "id": 6,
+      "name": "Camera Battery",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 7,
+      "name": "Old Bookmark",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 8,
+      "name": "Ink Pen",
+      "description": "",
+      "location": [5],
+      "content": {}
+    }
+  ]
+}

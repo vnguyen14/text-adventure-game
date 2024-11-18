@@ -1,0 +1,29 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Mrs. Henderson",
+      "description": "Mrs. Henderson is the friendly librarian who loves helping others find books. She is knowledgeable about flowers and photography.",
+      "roomID": 2,
+      "items": [
+        {
+          "item_id": 1,
+          "action_id": 2,
+          "message_id": 1
+        },
+        {
+          "item_id": 2,
+          "action_id": 2,
+          "message_id": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dina",
+      "description": "Dina is the owner of the neighborhood restaurant and Sophia's granddaughter.\n",
+      "roomID": 2,
+      "items": []
+    }
+  ]
+}
