@@ -5,8 +5,8 @@
       "riddle": "\n Each arrangement must have exactly three different types of flowers of different colors.\n Red flowers can be paired with yellow, purple and white flowers.\n Yellow flowers can be paired with red and white flowers.\n Blue flowers can be paired with purple and white flowers.\n Purple flowers can be paired with red, blue, and white flowers.\n White flowers can be paired with any color except other white flowers.\n Each arrangement must have at least two different sizes.\n Each arrangement cannot have more than one strongly scented type of flower.\n",
       "answers": [
         "RDS",
-        "DLH",
-        "DST"
+        "RDT",
+        "RTS"
       ],
       "room_id": 3,
       "success_dialogues": [],
