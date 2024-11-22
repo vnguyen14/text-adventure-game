@@ -1,5 +1,5 @@
 from Modules.room import Room
-from game_engine import home_logic, flowerShop_logic, restaurant_logic, library_logic
+from game_engine import home_logic, flowerShop_logic, restaurant_logic, library_logic, bakery_logic
 from Modules.item import Item
 from Modules.action import Action
 
@@ -32,6 +32,8 @@ def enter_room():
     """Displays the appropriate room details and starts room-specific logic."""
     if current_room.name == "Florence's Flower Shop":
         flowerShop_logic.start_flower_shop(current_room, items)
+    elif current_room.name == "Jeremy's Baked Goods":
+        bakery_logic.bakery_logic(current_room, items)
     elif current_room.name == "Dina's Diner":
         restaurant_logic.start_restaurant(current_room)
     elif current_room.name == "Lore Library":
@@ -48,13 +50,15 @@ while True:
         break
     elif command == "man":
         manual = Action.print_game_manual(actions)
-        print(manual) #display manual
+        print(manual)  # Display manual
     elif command in ["n", "s", "e", "w"]:
         move_player(command)
     elif current_room.name == "Home":
         home_logic.process_home_command(command, current_room, items)
     elif current_room.name == "Florence's Flower Shop":
         flowerShop_logic.process_flower_shop_command(command, current_room, items)
+    elif current_room.name == "Jeremy's Baked Goods":
+        bakery_logic.process_bakery_command(command, current_room, items)
     elif current_room.name == "Lore Library":
         library_logic.process_library_command(command, current_room, items)
     else:
