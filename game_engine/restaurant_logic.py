@@ -32,7 +32,7 @@ def give_recipe():
     """Give Dina the recipe from Sophia"""
     global task_status
     if "Sophia's Lavender Pie Recipe" in collected_items:
-        collected_items.remove("Sophia's Lavender Pie Recipe")
+        collected_items.remove(5)
         task_status = True
         print("Wow, I can’t believe you did it! I was worried that the recipe was lost forever.")
     else:
