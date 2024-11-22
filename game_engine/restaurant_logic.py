@@ -2,7 +2,10 @@ from Modules.room import Room
 from Modules.item import Item
 
 collected_items = []
+items = Item.load_items('items.json')
+
 task_status = False
+
 def start_restaurant(room):
     """Prints the description of the restaurant."""
     # if first time in room => long description
@@ -31,8 +34,8 @@ def help_dina():
 def give_recipe():
     """Give Dina the recipe from Sophia"""
     global task_status
-    if "Sophia's Lavender Pie Recipe" in collected_items:
-        collected_items.remove(5)
+    if items[5] in collected_items:
+        collected_items.remove(items[5])
         task_status = True
         print("Wow, I can’t believe you did it! I was worried that the recipe was lost forever.")
     else:
@@ -50,39 +53,38 @@ def restaurant_command(command):
     elif action == "give" and item_name == "recipe":
         give_recipe()
 
-    # function for testing
+    # # function for testing
     # elif action == "take" and item_name == "recipe":
     #     take_recipe()
-    # function for testing
+    # # function for testing
 
     else:
         print("I don't understand that command.")
 
-# test
+# # test
 # def take_recipe():
-#     items = Item.load_items('items.json')
-#     collected_items.append(items["sophia's lavender pie recipe"].name)
+#     collected_items.append(items[5])
 #     print("You've added 'Sophia's lavender pie recipe' to your bag.")
-#
+
 # def game_loop():
 #     """Check if everything is working in the room"""
 #     rooms = Room.load_rooms('rooms.json')
 #     dina_diner = rooms[4]
 #     start_restaurant(dina_diner)
-#
+
 #     while True:
 #         # Start the restaurant area
 #         # Get user input
 #         command = input("\nEnter a command: ")
 #         if command == "start":
 #             start_restaurant(dina_diner)
-#         if command.lower() == "q":
+#         elif command.lower() == "q":
 #             print("Thanks for playing!")
 #             break
-#
-#         restaurant_command(command)
-#
-#
+#         else:
+#             restaurant_command(command)
+
+
 # # Run the game
 # if __name__ == "__main__":
 #     game_loop()

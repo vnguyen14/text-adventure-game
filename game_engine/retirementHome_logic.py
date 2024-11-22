@@ -53,6 +53,8 @@ def retirementHome_command(command):
         give_lavender()
     elif action == "take" and item_name == "recipe":
         take_recipe()
+    else:
+        print("I don't understand that command.")
 
 # def game_loop():
 #     """Check if everything is working in the room"""
@@ -67,11 +69,11 @@ def retirementHome_command(command):
 #         command = input("\nEnter a command: ")
 #         if command == "start":
 #             start_restaurant(retirementHome)
-#         if command.lower() == "q":
+#         elif command.lower() == "q":
 #             print("Thanks for playing!")
 #             break
-
-#         retirementHome_command(command)
+#         else:
+#             retirementHome_command(command)
 
 
 # # Run the game
