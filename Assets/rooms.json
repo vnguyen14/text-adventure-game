@@ -40,7 +40,7 @@
         },
         {
           "direction": "s",
-          "roomID": 4
+          "roomID": 5
         }
       ]
     },
@@ -88,49 +88,40 @@
         },
         {
           "direction": "s",
-          "roomID": 9
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "name": "Restaurant",
-      "longDescription": "",
-      "shortDescription": "",
-      "connections": [
-        {
-          "direction": "n",
-          "roomID": 6
-        },
-        {
-          "direction": "e",
           "roomID": 8
         }
       ]
     },
     {
-      "id": 8,
+      "id": 7,
       "name": "Retirement Home",
       "longDescription": "You are in Riverside Retirement Homes. The lobby is warm and welcoming, with the gentle hum of an old radio playing classic tunes from the 50s. Residents sit together in small clusters chatting softly, while a caretaker passes by with a friendly smile. You see Grandma Sophia knitting alone in front of the television.",
       "shortDescription": "You are in Riverside Retirement Homes. Grandma Sophia sits alone, knitting quietly in front of the television.",
       "connections": [
         {
           "direction": "s",
-          "roomID": 7
+          "roomID": 4
         },
         {
-          "direction": "e",
+          "direction": "w",
           "roomID": 2
         }
       ]
     },
     {
-      "id": 9,
+      "id": 8,
       "name": "The Park",
       "longDescription": "You are in Perennial Park, surrounded by a lush canopy of trees and the sound of rustling leaves.\nYour attention is drawn to soft whimpering. A small dog cowers behind a tree. You recognize him. It’s Mrs. Davis’ dog, Max.",
       "shortDescription": "You are in Perennial Park. Here’s where you found Max, Mrs. Davis’s dog",
       "connections": [
-
+        {
+          "direction": "n",
+          "roomID": 6
+        },
+        {
+          "direction": "s",
+          "roomID": 4
+        }
       ]
     }
   ]
