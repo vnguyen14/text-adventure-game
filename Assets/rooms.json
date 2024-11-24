@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Home",
-      "longDescription": "You are in your small and cozy home. The bed is soft and inviting, but the alarm clock is going off, signaling the start of a new day . Waking up with a refreshed mind, you start getting ready for the day. You brush your teeth, get dressed, and enjoy some light breakfast and coffee. Don't forget to collect all your necessary items before leaving the house!",
+      "longDescription": "You are in your small and cozy home. \nThe bed is soft and inviting, but the alarm clock is going off, signaling the start of a new day. \nWaking up with a refreshed mind, you start getting ready for the day. \nYou brush your teeth, get dressed, and enjoy some light breakfast and coffee. \nDon't forget to collect all your necessary items before leaving the house!",
       "shortDescription": "You woke up and start to get ready for the day after collecting all necessary items.",
       "connections": [
         {
@@ -15,8 +15,8 @@
     { 
       "id": 2,
       "name": "Bakery",
-      "longDescription": "Starting off bright and early in the morning, you were asked urgently by the owner of the local Bake Goods shop if you could help them pick up some last-minute groceries for a big order as one of their workers fell sick. You were provided a list, but as someone who barely ever made dessert, the task seemed a bit harder than how you had imagined. What problem would you have to solve in order to finish the task in time for the bakers to start making their order?",
-      "shortDescription": "You're in the town's Baked Goods shop. The owner Jeremy has asked for your help in some last-minute shopping for a big order, but the task list turns out to be more complicated than it seems.",
+      "longDescription": "Starting off bright and early in the morning, you were asked urgently by the owner of the local Bake Goods shop if you could \nhelp them pick up some last-minute groceries for a big order as one of their workers fell sick. \nYou were provided a list, but as someone who barely ever made dessert, the task seemed a bit harder than how you had imagined. \nWhat problem would you have to solve in order to finish the task in time for the bakers to start making their order?",
+      "shortDescription": "You're in the town's Baked Goods shop. \nThe owner Jeremy has asked for your help in some last-minute shopping for a big order, but the task list turns out to be more complicated than it seems.",
       "connections": [
         {
           "direction": "w",
@@ -31,8 +31,8 @@
     { 
       "id": 3,
       "name": "Florence's Flower Shop",
-      "longDescription": "You are in a flower shop. The walls are lined with shelves adorned with vibrant blooms. In the center, a large wooden table is strewn with sharp shears, spools of twine, and rolls of wrapping paper. Behind the table, Florence, the florist, moves with frantic purpose. Nearby, a chalkboard displays a large order with scratched-out ideas and half-erased notes.",
-      "shortDescription": "You are in a flower shop. A frantic florist crafts arrangements at a cluttered table. A chalkboard of scratched-out ideas is nearby.",
+      "longDescription": "You are in a flower shop. \nThe walls are lined with shelves adorned with vibrant blooms. \nIn the center, a large wooden table is strewn with sharp shears, spools of twine, and rolls of wrapping paper. \nBehind the table, Florence, the florist, moves with frantic purpose. \nNearby, a chalkboard displays a large order with scratched-out ideas and half-erased notes.",
+      "shortDescription": "You are in a flower shop. \nA frantic florist crafts arrangements at a cluttered table. \nA chalkboard of scratched-out ideas is nearby.",
       "connections": [
         {
           "direction": "e",
@@ -47,8 +47,8 @@
     {
       "id": 4,
       "name": "Dina's Diner",
-      "longDescription": "You are in Dina's Diner, the neighborhood restaurant. The aroma of freshly brewed coffee mingles with the sweet scent of pie cooling in the back.The classic checkerboard floors feels like a nostalgic trip back in time and the red vinyl booths invite you to sink in. Behind the counter, you spot Dina, scurrying around as if searching for something.",
-      "shortDescription": "You are in Dina's Diner, the neighborhood restaurant. The owner scurries around looking for something.",
+      "longDescription": "You are in Dina's Diner, the neighborhood restaurant. \nThe aroma of freshly brewed coffee mingles with the sweet scent of pie cooling in the back. \nThe classic checkerboard floors feels like a nostalgic trip back in time and the red vinyl booths invite you to sink in. \nBehind the counter, you spot Dina, scurrying around as if searching for something.",
+      "shortDescription": "You are in Dina's Diner, the neighborhood restaurant. \nThe owner scurries around looking for something.",
       "connections": [
         {
           "direction": "n",
@@ -63,8 +63,8 @@
     {
       "id": 5,
       "name": "Lore Library",
-      "longDescription": "You are in Lore Library. Towering shelves stretch from front to back, brimming with centuries of knowledge and boundless imagination. The inviting atmosphere encourages you to explore the countless stories waiting to be discovered. The quiet ambiance enhances the serenity of the space, making it a perfect haven for readers and dreamers alike. Near the front door, Mrs. Henderson, the librarian, expertly assists those seeking a specific title.",
-      "shortDescription": "You are in Lore Library. Mrs. Henderson, the librarian, skillfully helps visitors find the titles they're looking for.",
+      "longDescription": "You are in Lore Library. \nTowering shelves stretch from front to back, brimming with centuries of knowledge and boundless imagination. \nThe inviting atmosphere encourages you to explore the countless stories waiting to be discovered. \nThe quiet ambiance enhances the serenity of the space, making it a perfect haven for readers and dreamers alike. \nNear the front door, Mrs. Henderson, the librarian, expertly assists those seeking a specific title.",
+      "shortDescription": "You are in Lore Library. \nMrs. Henderson, the librarian, skillfully helps visitors find the titles they're looking for.",
       "connections": [
         {
           "direction": "n",
@@ -79,8 +79,8 @@
     {
       "id": 6,
       "name": "Neighbour's House",
-      "longDescription": "You are in the Smith’s house. The Smiths are a charming elderly couple. You often check-in with them in case they need any help. Today, they’ve kindly invited you over for some afternoon tea. Everyone decides to sit outside to enjoy the nice breeze and smell of nice tea and freshly baked cookies Mrs. Smith made.",
-      "shortDescription": "You are in the Smiths’ house for some afternoon tea.",
+      "longDescription": "You are in the Smiths' house. \nThe Smiths are a charming elderly couple. \nYou often check-in with them in case they need any help. \nToday, they've kindly invited you over for some afternoon tea. \nEveryone decides to sit outside to enjoy the nice breeze and smell of nice tea and freshly baked cookies Mrs. Smith made.",
+      "shortDescription": "You are in the Smiths' house for some afternoon tea.",
       "connections": [
         {
           "direction": "w",
@@ -95,8 +95,8 @@
     {
       "id": 7,
       "name": "Retirement Home",
-      "longDescription": "You are in Riverside Retirement Homes. The lobby is warm and welcoming, with the gentle hum of an old radio playing classic tunes from the 50s. Residents sit together in small clusters chatting softly, while a caretaker passes by with a friendly smile. You see Grandma Sophia knitting alone in front of the television.",
-      "shortDescription": "You are in Riverside Retirement Homes. Grandma Sophia sits alone, knitting quietly in front of the television.",
+      "longDescription": "You are in Riverside Retirement Homes. \nThe lobby is warm and welcoming, with the gentle hum of an old radio playing classic tunes from the 50s. \nResidents sit together in small clusters chatting softly, while a caretaker passes by with a friendly smile. \nYou see Grandma Sophia knitting alone in front of the television.",
+      "shortDescription": "You are in Riverside Retirement Homes. \nGrandma Sophia sits alone, knitting quietly in front of the television.",
       "connections": [
         {
           "direction": "s",
@@ -111,8 +111,8 @@
     {
       "id": 8,
       "name": "The Park",
-      "longDescription": "You are in Perennial Park, surrounded by a lush canopy of trees and the sound of rustling leaves.\nYour attention is drawn to soft whimpering. A small dog cowers behind a tree. You recognize him. It’s Mrs. Davis’ dog, Max.",
-      "shortDescription": "You are in Perennial Park. Here’s where you found Max, Mrs. Davis’s dog",
+      "longDescription": "You are in Perennial Park, surrounded by a lush canopy of trees and the sound of rustling leaves.\nYour attention is drawn to soft whimpering. \nA small dog cowers behind a tree. \nYou recognize him. It's Mrs. Davis' dog, Max.",
+      "shortDescription": "You are in Perennial Park. Here's where you found Max, Mrs. Davis's dog.",
       "connections": [
         {
           "direction": "n",

@@ -32,18 +32,18 @@ class Room:
     # Method to print description
     def print_description(self):
         if self.first_time_in_room:
-            print(self.longDescription)
+            print(self.longDescription.strip())
             self.first_time_in_room = False
         else:
-            print(self.shortDescription)
+            print(self.shortDescription.strip())
 
     # Method to print long description
     def print_long_description(self):
-        print(self.longDescription)
+        print(self.longDescription.strip())
 
     # Method to print short description
     def print_short_description(self):
-        print(self.shortDescription)
+        print(self.shortDescription.strip())
 
     def change_first_time_status(self):
         self.first_time_in_room = False

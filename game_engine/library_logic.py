@@ -22,7 +22,8 @@ def find_items(keyword=None, available_items=None):
         if keyword.lower() in item.name.lower() or not keyword
     ]
     if search_results:
-        print(f"Let me see what I can find! Here you go: {', '.join(search_results)}")
+        sorted_results = sorted(search_results)  # Sort the list alphabetically
+        print("Let me see what I can find! Here you go:\n- " + "\n- ".join(sorted_results))
     else:
         print("Sorry dear, I couldn't find anything matching that word.")
 

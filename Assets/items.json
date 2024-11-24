@@ -73,26 +73,26 @@
       "id": 5,
       "name": "Sophia's Lavender Pie Recipe",
       "description": "",
-      "location": [1],
+      "location": [7],
       "content": {}
     },
     {
       "id": 6,
-      "name": "Camera Battery",
+      "name": "Camera battery",
       "description": "",
       "location": [5],
       "content": {}
     },
     {
       "id": 7,
-      "name": "Old Bookmark",
+      "name": "Old bookmark",
       "description": "",
       "location": [5],
       "content": {}
     },
     {
       "id": 8,
-      "name": "Ink Pen",
+      "name": "Leaky ink pen",
       "description": "",
       "location": [
         5
@@ -159,7 +159,70 @@
       "id": 9,
       "name": "Lavender",
       "description": "",
-      "location": [1],
+      "location": [3],
+      "content": {}
+    },
+    {
+      "id": 10,
+      "name": "Out of This World! A guide to space book",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 11,
+      "name": "Ctrl, Alt, Delight: A guide to computer science book",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 12,
+      "name": "Brake It Down: A guide to cars book",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 13,
+      "name": "Sew It Goes: A guide to fashion design book",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 14,
+      "name": "Weight a Minute: A guide to health and fitness book",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 15,
+      "name": "Low-resolution projector",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 16,
+      "name": "Monopoly with missing pieces",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 17,
+      "name": "Noise-cancelling headphones",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 18,
+      "name": "1959 Gibson Les Paul Standard guitar",
+      "description": "",
+      "location": [5],
       "content": {}
     }
   ]
