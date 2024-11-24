@@ -29,7 +29,7 @@ def take_item(item_name, room_id, items):
 
     #If all items are collected/taken, print message to start the day
     if all_items_collected():
-        print("Let’s start the day! Buzz! There’s a new message on your phone.")
+        print("Let's start the day! Buzz! There's a new message on your phone.")
 
 # Helper function to check if all items re collected/taken
 def all_items_collected():
@@ -40,7 +40,7 @@ def all_items_collected():
 # Function to process 'inspect phone' action
 def inspect_phone():
     if "phone" in collected_items:
-        print("There’s a message from Jeremy: “I have a favor to ask! One of my workers fell sick. Can you pick up some last-minute groceries for me? I need…” You can’t make sense of the rest of the message. It’s probably best to speak to Jeremy in person.")
+        print("There's a message from Jeremy: 'I have a favor to ask! One of my workers fell sick. Can you pick up some last-minute groceries for me? I need…” You can't make sense of the rest of the message. It's probably best to speak to Jeremy in person.'")
     else:
         print("You don't have your phone yet!")
 
