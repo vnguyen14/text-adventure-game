@@ -94,7 +94,65 @@
       "id": 8,
       "name": "Ink Pen",
       "description": "",
-      "location": [5],
+      "location": [
+        5
+      ],
+      "content": {}
+    },
+    {
+      "id": 26,
+      "name": "Tea",
+      "description": "A cup of tea served by Mrs. Smith for some afternoon tea",
+      "location": [6],
+      "content": {}
+    },
+    {
+      "id": 27,
+      "name": "Box",
+      "description": "A box of various old items to go for donation",
+      "location":[6],
+      "content":{}
+    },
+    {
+      "id": 28,
+      "name": "Leash",
+      "description": "An old leash belonging to a dog the Smith's used to have",
+      "location": [],
+      "content": {}
+    },
+    {
+      "id": 29,
+      "name": "Camera",
+      "description": "A vintage camera from the Smith's younger years",
+      "location":[],
+      "content":{}
+    },
+    {
+      "id": 30,
+      "name": "Baseball Glove",
+      "description": "A baseball glove from when Mr. Smith used to play",
+      "location": [],
+      "content": {}
+    },
+    {
+      "id": 31,
+      "name": "Doll",
+      "description": "A delicate porcelain doll that Mrs. Smith used to have on display",
+      "location": [],
+      "content": {}
+    },
+    {
+      "id": 32,
+      "name": "Scarf",
+      "description": "An old scarf Mrs. Smith used to wear",
+      "location": [],
+      "content": {}
+    },
+    {
+      "id": 100,
+      "name": "Max",
+      "description": "Mrs. Davis' precious dog Max who you have helped look for! Time to bring him back to Mrs. Davis",
+      "location": [9],
       "content": {}
     }
   ]
