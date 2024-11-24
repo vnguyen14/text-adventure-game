@@ -32,7 +32,14 @@
       "id": 2,
       "name": "Dina",
       "description": "Dina is the owner of the neighborhood restaurant and Sophia's granddaughter.\n",
-      "roomID": 2,
+      "roomID": 7,
+      "items": []
+    },
+    {
+      "id": 3,
+      "name": "Sophia",
+      "description": "Sophia is Diana's grandmother. She doesn't remember much due to old age, but she is a kind and sweet person.\n",
+      "roomID": 8,
       "items": []
     }
   ]

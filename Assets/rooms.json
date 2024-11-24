@@ -111,8 +111,8 @@
     {
       "id": 8,
       "name": "Retirement Home",
-      "longDescription": "",
-      "shortDescription": "",
+      "longDescription": "You are in Riverside Retirement Homes. The lobby is warm and welcoming, with the gentle hum of an old radio playing classic tunes from the 50s. Residents sit together in small clusters chatting softly, while a caretaker passes by with a friendly smile. You see Grandma Sophia knitting alone in front of the television.",
+      "shortDescription": "You are in Riverside Retirement Homes. Grandma Sophia sits alone, knitting quietly in front of the television.",
       "connections": [
         {
           "direction": "s",
