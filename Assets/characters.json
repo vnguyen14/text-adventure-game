@@ -3,18 +3,28 @@
     {
       "id": 1,
       "name": "Mrs. Henderson",
-      "description": "Mrs. Henderson is the friendly librarian who loves helping others find books. She is knowledgeable about flowers and photography.",
-      "roomID": 2,
+      "description": "Mrs. Henderson is the friendly librarian who loves helping others find books and equipment. She is knowledgeable about flowers and photography.",
+      "roomID": 5,
       "items": [
         {
-          "item_id": 1,
-          "action_id": 2,
+          "item_id": 4,
+          "action_id": 7,
           "message_id": 1
         },
         {
-          "item_id": 2,
-          "action_id": 2,
-          "message_id": 3
+          "item_id": 6,
+          "action_id": 7,
+          "message_id": 1
+        },
+        {
+          "item_id": 7,
+          "action_id": 7,
+          "message_id": 1
+        },
+        {
+          "item_id": 8,
+          "action_id": 7,
+          "message_id": 1
         }
       ]
     },
