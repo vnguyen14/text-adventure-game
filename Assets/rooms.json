@@ -79,8 +79,8 @@
     {
       "id": 6,
       "name": "Neighbour's House",
-      "longDescription": "",
-      "shortDescription": "",
+      "longDescription": "You are in the Smith’s house. The Smiths are a charming elderly couple. You often check-in with them in case they need any help. Today, they’ve kindly invited you over for some afternoon tea. Everyone decides to sit outside to enjoy the nice breeze and smell of nice tea and freshly baked cookies Mrs. Smith made.",
+      "shortDescription": "You are in the Smiths’ house for some afternoon tea.",
       "connections": [
         {
           "direction": "w",
@@ -88,7 +88,7 @@
         },
         {
           "direction": "s",
-          "roomID": 7
+          "roomID": 9
         }
       ]
     },
@@ -122,6 +122,15 @@
           "direction": "e",
           "roomID": 2
         }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "The Park",
+      "longDescription": "You are in Perennial Park, surrounded by a lush canopy of trees and the sound of rustling leaves.\nYour attention is drawn to soft whimpering. A small dog cowers behind a tree. You recognize him. It’s Mrs. Davis’ dog, Max.",
+      "shortDescription": "You are in Perennial Park. Here’s where you found Max, Mrs. Davis’s dog",
+      "connections": [
+
       ]
     }
   ]
