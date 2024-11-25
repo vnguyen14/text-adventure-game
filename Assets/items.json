@@ -224,6 +224,33 @@
       "description": "",
       "location": [5],
       "content": {}
+    },
+    { 
+      "id": 19, 
+      "name": "Butter", 
+      "description": "Smooth and creamy butter.", 
+      "location": [2], 
+      "content": {} 
+    },
+    { 
+      "id": 20, 
+      "name": "Yeast", 
+      "description": "Helps dough rise.", 
+      "location": [2], 
+      "content": {} 
+    },
+    { 
+      "id": 21, 
+      "name": "Sugar", 
+      "description": "Sweet and fine granules.", 
+      "location": [2], 
+      "content": {} },
+    { 
+      "id": 22, 
+      "name": "Chocolate chips", 
+      "description": "Little round chocolates", 
+      "location": [2], 
+      "content": {} 
     }
   ]
 }
