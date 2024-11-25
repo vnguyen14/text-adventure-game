@@ -3,7 +3,6 @@ from game_engine import home_logic, flowerShop_logic, bakery_logic, restaurant_l
 from Modules.item import Item
 from Modules.action import Action
 from Modules.game_state import GameState
-from game_engine.neighbours_logic import neighbours_command
 
 # Load rooms, actions, and items data from JSON files
 rooms = Room.load_rooms('rooms.json')
