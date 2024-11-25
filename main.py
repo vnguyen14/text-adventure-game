@@ -1,7 +1,8 @@
 from Modules.room import Room
-from game_engine import home_logic, flowerShop_logic, restaurant_logic, library_logic
+from game_engine import home_logic, flowerShop_logic, restaurant_logic, library_logic, neighbours_logic, park_logic
 from Modules.item import Item
 from Modules.action import Action
+from game_engine.neighbours_logic import neighbours_command
 
 # Load rooms, actions and items data from json files
 rooms = Room.load_rooms('rooms.json')
@@ -57,6 +58,10 @@ while True:
         flowerShop_logic.process_flower_shop_command(command, current_room, items)
     elif current_room.name == "Lore Library":
         library_logic.process_library_command(command, current_room, items)
+    elif current_room.name == "Neighbour's House":
+        neighbours_logic.neighbours_command(command, current_room, items)
+    elif current_room.name == "The Park":
+        park_logic.park_command(command, current_room, items)
     else:
         print("Invalid command.")
 

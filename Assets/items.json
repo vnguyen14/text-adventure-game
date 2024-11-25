@@ -73,26 +73,154 @@
       "id": 5,
       "name": "Sophia's Lavender Pie Recipe",
       "description": "",
-      "location": [1],
+      "location": [7],
       "content": {}
     },
     {
       "id": 6,
-      "name": "Camera Battery",
+      "name": "Camera battery",
       "description": "",
       "location": [5],
       "content": {}
     },
     {
       "id": 7,
-      "name": "Old Bookmark",
+      "name": "Old bookmark",
       "description": "",
       "location": [5],
       "content": {}
     },
     {
       "id": 8,
-      "name": "Ink Pen",
+      "name": "Leaky ink pen",
+      "description": "",
+      "location": [
+        5
+      ],
+      "content": {}
+    },
+    {
+      "id": 26,
+      "name": "Tea",
+      "description": "A cup of tea served by Mrs. Smith for some afternoon tea",
+      "location": [6],
+      "content": {}
+    },
+    {
+      "id": 27,
+      "name": "Box",
+      "description": "A box of various old items to go for donation",
+      "location":[6],
+      "content":{}
+    },
+    {
+      "id": 28,
+      "name": "Leash",
+      "description": "An old leash belonging to a dog the Smith's used to have",
+      "location": [],
+      "content": {}
+    },
+    {
+      "id": 29,
+      "name": "Camera",
+      "description": "A vintage camera from the Smith's younger years",
+      "location":[],
+      "content":{}
+    },
+    {
+      "id": 30,
+      "name": "Baseball Glove",
+      "description": "A baseball glove from when Mr. Smith used to play",
+      "location": [],
+      "content": {}
+    },
+    {
+      "id": 31,
+      "name": "Doll",
+      "description": "A delicate porcelain doll that Mrs. Smith used to have on display",
+      "location": [],
+      "content": {}
+    },
+    {
+      "id": 32,
+      "name": "Scarf",
+      "description": "An old scarf Mrs. Smith used to wear",
+      "location": [],
+      "content": {}
+    },
+    {
+      "id": 100,
+      "name": "Max",
+      "description": "Mrs. Davis' precious dog Max who you have helped look for! Time to bring him back to Mrs. Davis",
+      "location": [9],
+      "content": {}
+    },
+    {
+      "id": 9,
+      "name": "Lavender",
+      "description": "",
+      "location": [3],
+      "content": {}
+    },
+    {
+      "id": 10,
+      "name": "Out of This World! A guide to space book",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 11,
+      "name": "Ctrl, Alt, Delight: A guide to computer science book",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 12,
+      "name": "Brake It Down: A guide to cars book",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 13,
+      "name": "Sew It Goes: A guide to fashion design book",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 14,
+      "name": "Weight a Minute: A guide to health and fitness book",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 15,
+      "name": "Low-resolution projector",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 16,
+      "name": "Monopoly with missing pieces",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 17,
+      "name": "Noise-cancelling headphones",
+      "description": "",
+      "location": [5],
+      "content": {}
+    },
+    {
+      "id": 18,
+      "name": "1959 Gibson Les Paul Standard guitar",
       "description": "",
       "location": [5],
       "content": {}
