@@ -84,8 +84,17 @@ def talk_to_florence():
 def help_florence():
     """Florence shares her bouquet requirements."""
     print("Thank you so much! Let me share some instructions with you.")
-    print(f"\033[1m{riddle_data['riddle']}\033[0m")  # Print the riddle from the JSON file
-    print("I keep a book of all the flowers we have in store, it's called 'What in Carnations? A guide to flowers', please feel free to take a look at it. Let me know if you found any good arrangement by saying the flowers' symbols, I'll let yoy know right away if the arrangement works!")
+    
+    # Handle riddle_data as a list
+    if isinstance(riddle_data, list) and riddle_data:
+        # Assuming Florence's bouquet riddle is the first in the list
+        relevant_riddle = riddle_data[0]  # Use the first riddle
+        print(f"\033[1m{relevant_riddle['riddle']}\033[0m")  # Print the riddle text
+    else:
+        print("No riddle data found for this room.")
+    
+    print("I keep a book of all the flowers we have in store, it's called 'What in Carnations? A guide to flowers', please feel free to take a look at it. Let me know if you found any good arrangement by saying the flowers' symbols, I'll let you know right away if the arrangement works!")
+
 
 
 # Helper function to display information from the flower guide book 

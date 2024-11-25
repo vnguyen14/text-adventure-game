@@ -14,7 +14,7 @@
     },
     { 
       "id": 2,
-      "name": "Bakery",
+      "name": "Jeremy's Bakery",
       "longDescription": "Starting off bright and early in the morning, you were asked urgently by the owner of the local Bake Goods shop if you could \nhelp them pick up some last-minute groceries for a big order as one of their workers fell sick. \nYou were provided a list, but as someone who barely ever made dessert, the task seemed a bit harder than how you had imagined. \nWhat problem would you have to solve in order to finish the task in time for the bakers to start making their order?",
       "shortDescription": "You're in the town's Baked Goods shop. \nThe owner Jeremy has asked for your help in some last-minute shopping for a big order, but the task list turns out to be more complicated than it seems.",
       "connections": [
