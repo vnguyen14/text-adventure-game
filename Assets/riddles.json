@@ -1,6 +1,22 @@
 {
   "riddles": [
     {
+      "id": 1,
+      "riddle": "I’m yellow and smooth, often spread on toast. I melt when it’s warm, and in batter, I boast.",
+      "answers": ["butter"],
+      "room_id": 2,
+      "success_dialogues": ["You found Butter!"],
+      "failure_dialogues": ["That's not correct. Try again."]
+    },
+    {
+      "id": 2,
+      "riddle": "I rise when it's hot, but I’m not alive. I come in different shapes, helping dough survive.",
+      "answers": ["yeast"],
+      "room_id": 2,
+      "success_dialogues": ["You found Yeast!"],
+      "failure_dialogues": ["That's not correct. Try again."]
+    },
+    {
       "id": 3,
       "riddle": "\n Each arrangement must have exactly three different types of flowers of different colors.\n Red flowers can be paired with yellow, purple and white flowers.\n Yellow flowers can be paired with red and white flowers.\n Blue flowers can be paired with purple and white flowers.\n Purple flowers can be paired with red, blue, and white flowers.\n White flowers can be paired with any color except other white flowers.\n Each arrangement must have at least two different sizes.\n Each arrangement cannot have more than one strongly scented type of flower.\n",
       "answers": [
@@ -11,6 +27,22 @@
       "room_id": 3,
       "success_dialogues": [],
       "failure_dialogues": []
+    },
+    {
+      "id": 4,
+      "riddle": "I make things sweet. I’m often brown or white. In cookies, I thrive.",
+      "answers": ["chocolate chips"],
+      "room_id": 2,
+      "success_dialogues": ["You found Chocolate Chips!"],
+      "failure_dialogues": ["That's not correct. Try again."]
+    },
+    {
+      "id": 5,
+      "riddle": "I am white and fine, used in cakes and bread. Too much of me is bad for your health, but without me, the dough would be dead.",
+      "answers": ["sugar"],
+      "room_id": 2,
+      "success_dialogues": ["You found Sugar!"],
+      "failure_dialogues": ["That's not correct. Try again."]
     }
   ]
 }
