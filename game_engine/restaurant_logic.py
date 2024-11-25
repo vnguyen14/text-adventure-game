@@ -1,7 +1,7 @@
 from Modules.room import Room
 from Modules.item import Item
 
-collected_items = []
+# collected_items = []
 items = Item.load_items('items.json')
 
 task_status = False
@@ -31,17 +31,17 @@ def help_dina():
     """Dina's hints for the task"""
     print("Really? You’d do that? You can find her at the retirement home, but I’ve tried talking to her a few times. It’s hard for her to focus these days. They say smell can jog a person’s memory though… Let me know what she says!")
 
-def give_recipe():
+def give_recipe(game_state):
     """Give Dina the recipe from Sophia"""
     global task_status
-    if items[5] in collected_items:
-        collected_items.remove(items[5])
+    if items[5] in game_state.collected_items:
+        game_state.collected_items.remove(items[5])
         task_status = True
         print("Wow, I can’t believe you did it! I was worried that the recipe was lost forever.")
     else:
         print("You don't have the recipe to give.")
 
-def restaurant_command(command):
+def process_restaurant_command(command,game_state):
     words = command.lower().split()
     action = words[0]
     item_name = ' '.join(words[1:]) if len(words) > 1 else None
@@ -51,7 +51,7 @@ def restaurant_command(command):
     elif action == "help" and item_name == "dina":
         help_dina()
     elif action == "give" and item_name == "recipe":
-        give_recipe()
+        give_recipe(game_state)
 
     # # function for testing
     # elif action == "take" and item_name == "recipe":

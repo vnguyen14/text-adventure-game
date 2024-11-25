@@ -45,7 +45,7 @@ def enter_room():
     elif room_name == "Dina's Diner":
         restaurant_logic.start_restaurant(current_room)
     elif room_name == "Lore Library":
-        library_logic.start_library(current_room, items)
+        library_logic.start_library(current_room)
     elif room_name == "Neighbour's House":
         neighbours_logic.start_neighbours(current_room, items)
     elif room_name == "The Park":
@@ -91,11 +91,11 @@ while True:
         if room_name == "Home":
             home_logic.process_home_command(command, current_room, items, game_state)
         elif room_name == "Jeremy's Bakery":
-            bakery_logic.process_bakery_command(command, current_room, items)
+            bakery_logic.process_bakery_command(command, current_room, items, game_state)
         elif room_name == "Florence's Flower Shop":
             flowerShop_logic.process_flower_shop_command(command, current_room, items, game_state)
         elif room_name == "Dina's Diner":
-            restaurant_logic.process_restaurant_command(command, current_room, items)
+            restaurant_logic.process_restaurant_command(command, current_room, items, game_state)
         elif room_name == "Lore Library":
             library_logic.process_library_command(command, current_room, items, game_state)
         elif room_name == "Neighbour's House":

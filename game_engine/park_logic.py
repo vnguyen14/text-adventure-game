@@ -26,7 +26,7 @@ def take_max(game_state):
     else:
         print("You'll need a leash.")
 
-def park_command(command, room, items,game_state):
+def process_park_command(command, room, items,game_state):
     words = command.lower().split()
     action = words[0]
     item_name = ' '.join(words[1:]) if len(words) > 1 else None

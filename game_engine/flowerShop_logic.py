@@ -51,7 +51,7 @@ def generate_valid_arrangements(room, items):
 
 
 # Function for solving puzzle logic
-def solve_arrangement(arrangement):
+def solve_arrangement(arrangement, game_state):
     """Checks if the player's arrangement matches Florence's criteria."""
     global arrangement_count
 
@@ -111,7 +111,7 @@ def inspect_book(items):
 
 
 # Function to precess user's commands from the promt/terminal
-def process_flower_shop_command(command, room, items,game_state):
+def process_flower_shop_command(command, room, items, game_state):
     """Processes commands specific to the flower shop room."""
     words = command.lower().split()
     action = words[0]
