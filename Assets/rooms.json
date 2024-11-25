@@ -24,7 +24,7 @@
         },
         {
           "direction": "e",
-          "roomID": 8
+          "roomID": 7
         }
       ]
     },
@@ -52,11 +52,11 @@
       "connections": [
         {
           "direction": "n",
-          "roomID": 6
+          "roomID": 8
         },
         {
           "direction": "e",
-          "roomID": 8
+          "roomID": 7
         }
       ]
     },

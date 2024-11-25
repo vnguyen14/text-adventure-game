@@ -19,7 +19,7 @@ def talk_to_sophia():
     # should have a global variable to track progress
     # for now, task_status
     if (task_status == False):
-        print("Oh, dear, I’m sorry, sweetheart. My memory isn’t what it used to be. I can’t quite recall the recipe anymore–just the way it made everyone smile. But I know it had lavender in it, and love, of course.")
+        print("Oh, dear, I'm sorry, sweetheart. My memory isn't what it used to be. I can't quite recall the recipe anymore–just the way it made everyone smile. But I know it had lavender in it, and love, of course.")
 
     else:
         print("Hello dear! You have a wonderful day!")
@@ -30,7 +30,7 @@ def give_lavender(game_state):
     if items[9] in game_state.collected_items and items[5] not in game_state.collected_items:
         game_state.collected_items.remove(items[9])
         task_status = True
-        print("Oh! Lavender! I can almost taste it! I used to steep it in the cream... and there was something about the honey... yes! It’s all coming back now! Let me quickly jot it down for you.")   
+        print("Oh! Lavender! I can almost taste it! I used to steep it in the cream... and there was something about the honey... yes! It's all coming back now! Let me quickly jot it down for you.")   
     else:
         print("You don't have the lavender to give.")
 
