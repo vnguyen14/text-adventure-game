@@ -10,7 +10,6 @@ class Item:
         self.location = location
         self.content = content
         
-
     def __str__(self):
         return self.name.capitalize()
 
@@ -36,3 +35,7 @@ class Item:
     # Method to return items available for each room
     def get_items_in_room(room_id, items):
         return [item for item in items.values() if room_id in item.location]
+    
+    def get_description(self):
+        # Print description of the item
+        print(self.description)
