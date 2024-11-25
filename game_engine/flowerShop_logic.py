@@ -52,16 +52,15 @@ def generate_valid_arrangements(room, items):
 
 # Function for solving puzzle logic
 def solve_arrangement(arrangement):
-    print(valid_arrangements)
     """Checks if the player's arrangement matches Florence's criteria."""
     global arrangement_count
 
     # Check if the entered arrangement is correct
     if arrangement in valid_arrangements:
         arrangement_count += 1
-        if arrangement_count < len(valid_arrangements):
-            print(f"Nice! I need {len(valid_arrangements) - arrangement_count} more!")
+        if arrangement_count < 3:
             valid_arrangements.remove(arrangement)
+            print(f"Nice! I need {len(valid_arrangements)} more!")
         else:
             print("Perfect! We might just pull this off for the festival!")
             print("Thanks for all your help. Let me treat you to lunch. I have to finish these bouquets but head over to Dina's Diner. I’ll let Dina know the bill is on me!")
