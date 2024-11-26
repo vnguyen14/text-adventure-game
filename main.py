@@ -2,11 +2,13 @@ from Modules.room import Room
 from game_engine import home_logic, flowerShop_logic, bakery_logic, restaurant_logic, library_logic, neighbours_logic, park_logic
 from Modules.item import Item
 from Modules.action import Action
+from Modules.game_state import GameState
 
 # Load rooms, actions, and items data from JSON files
 rooms = Room.load_rooms('rooms.json')
 items = Item.load_items('items.json')
 actions = Action.load_actions("actions.json")
+game_state = GameState()
 
 # Get the initial room (Home)
 global current_room
@@ -39,11 +41,11 @@ def enter_room():
     elif room_name == "Jeremy's Bakery":
         bakery_logic.start_bakery(current_room, items)
     elif room_name == "Florence's Flower Shop":
-        flowerShop_logic.start_flower_shop(current_room, items)
+        flowerShop_logic.start_flower_shop(current_room, items, game_state.collected_items)
     elif room_name == "Dina's Diner":
         restaurant_logic.start_restaurant(current_room)
     elif room_name == "Lore Library":
-        library_logic.start_library(current_room, items)
+        library_logic.start_library(current_room)
     elif room_name == "Neighbour's House":
         neighbours_logic.start_neighbours(current_room, items)
     elif room_name == "The Park":
@@ -58,30 +60,47 @@ enter_room()
 # Game loop for handling user commands
 while True:
     command = input("> ").strip().lower()
-    if command in ["quit", "exit"]:
+    words = command.split()
+    action = words[0]
+    parameter = ' '.join(words[1:]) if len(words) > 1 else None
+
+    if action in ["quit", "exit"]:
         print("Thanks for playing!")
         break
-    elif command == "man":
+    elif action == "man":
         manual = Action.print_game_manual(actions)
         print(manual)  # Display the manual
-    elif command in ["n", "s", "e", "w"]:
-        move_player(command)
+    elif action == "inventory":
+        print("Here's what you have:\n- " + "\n- ".join(sorted(game_state.collected_items)))
+    elif action == "inspect":
+        # Check if the room has a custom command for 'inspect'
+        if current_room.name == "Neighbour's House":
+            neighbours_logic.neighbours_command(command, current_room, items, game_state)
+        else:
+            # Default inspect behavior for items
+            item = next((item for item in items.values() if item.name.lower() == parameter.lower()), None)
+            if parameter in game_state.collected_items:
+                item.get_description()
+            else:
+                print(f"Item '{parameter}' is not in your inventory.")
+    elif action in ["n", "s", "e", "w", "se"]:
+        move_player(action)
     else:
         # Route the command to the specific room logic
         room_name = current_room.name
         if room_name == "Home":
-            home_logic.process_home_command(command, current_room, items)
+            home_logic.process_home_command(command, current_room, items, game_state)
         elif room_name == "Jeremy's Bakery":
-            bakery_logic.process_bakery_command(command, current_room, items)
+            bakery_logic.process_bakery_command(command, current_room, items, game_state)
         elif room_name == "Florence's Flower Shop":
-            flowerShop_logic.process_flower_shop_command(command, current_room, items)
+            flowerShop_logic.process_flower_shop_command(command, current_room, items, game_state)
         elif room_name == "Dina's Diner":
-            restaurant_logic.process_restaurant_command(command, current_room, items)
+            restaurant_logic.process_restaurant_command(command, current_room, items, game_state)
         elif room_name == "Lore Library":
-            library_logic.process_library_command(command, current_room, items)
+            library_logic.process_library_command(command, current_room, items, game_state)
         elif room_name == "Neighbour's House":
-            neighbours_logic.neighbours_command(command, current_room, items)
+            neighbours_logic.neighbours_command(command, current_room, items, game_state)
         elif room_name == "The Park":
-            park_logic.process_park_command(command, current_room, items)
+            park_logic.process_park_command(command, current_room, items, game_state)
         else:
             print("Invalid command.")
