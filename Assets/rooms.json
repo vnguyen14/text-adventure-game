@@ -32,7 +32,7 @@
       "id": 3,
       "name": "Florence's Flower Shop",
       "longDescription": "You are in a flower shop. \nThe walls are lined with shelves adorned with vibrant blooms. \nIn the center, a large wooden table is strewn with sharp shears, spools of twine, and rolls of wrapping paper. \nBehind the table, Florence, the florist, moves with frantic purpose. \nNearby, a chalkboard displays a large order with scratched-out ideas and half-erased notes.",
-      "shortDescription": "You are in a flower shop. \nA frantic florist crafts arrangements at a cluttered table. \nA chalkboard of scratched-out ideas is nearby.",
+      "shortDescription": "You are in a flower shop. \nA frantic florist crafts arrangements at a cluttered table.",
       "connections": [
         {
           "direction": "e",
@@ -41,6 +41,10 @@
         {
           "direction": "s",
           "roomID": 5
+        },
+        {
+          "direction": "se",
+          "roomID": 6
         }
       ]
     },

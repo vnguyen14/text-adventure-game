@@ -2,7 +2,6 @@ from Modules.item import Item
 from Modules.riddle import Riddle
 from itertools import combinations
 
-# collected_items = []
 # Track the number of arrangements completed
 arrangement_count = 0
 
@@ -13,16 +12,20 @@ riddle_data = {}
 
 
 # Start the room
-def start_flower_shop(room, items):
+def start_flower_shop(room, items, collected_items):
     """Prints the long description of the flower shop, get riddle data and shows available items."""
     global valid_arrangements
     global riddle_data
 
-    room.print_long_description()
+    if ('what in carnations? a guide to flowers book' in collected_items):
+        room.print_short_description()
+        print("\n\n\033[1mFlorence: Oh, I see you got the book! Good luck!\033[0m")
+    else:
+        room.print_long_description()
     available_items = Item.get_items_in_room(room.id, items)
     riddle_data = Riddle.get_riddle_by_room(room.id)
     valid_arrangements = generate_valid_arrangements(room, available_items)
-    print(f"Items in this room: {[item.name for item in available_items]}")
+    # print(f"Items in this room: {[item.name for item in available_items]}")
 
 
 # Helper function to generate valid flowers combinations
@@ -92,22 +95,22 @@ def help_florence():
     else:
         print("No riddle data found for this room.")
     
-    print("I keep a book of all the flowers we have in store, it's called 'What in Carnations? A guide to flowers', please feel free to take a look at it. Let me know if you found any good arrangement by saying the flowers' symbols, I'll let you know right away if the arrangement works!")
+    print("I know this is super confusing, especially for you. There is a book called 'What in Carnations? A guide to flowers', you can find it at the Lore Library. That book helped me a tons when I started learning about flowers. Maybe you could stop by the library to borrow as an assistance for this task?")
 
 
 
 # Helper function to display information from the flower guide book 
-def inspect_book(items):
-    """Displays information from the flower guide book in a table format."""
+# def inspect_book(items):
+#     """Displays information from the flower guide book in a table format."""
 
-    book_name = "What in Carnations? A Guide to Flowers"
-    # Use case-insensitive search for the item name in the items dictionary
-    book = next((item for item in items.values() if book_name.lower() in item.name.lower()), None)
+#     book_name = "What in Carnations? A Guide to Flowers"
+#     # Use case-insensitive search for the item name in the items dictionary
+#     book = next((item for item in items.values() if book_name.lower() in item.name.lower()), None)
 
-    if book:
-        print(book.description)  # Print the book's description
-    else:
-        print("The book is not available in this room.")
+#     if book:
+#         print(book.description)  # Print the book's description
+#     else:
+#         print("The book is not available in this room.")
 
 
 # Function to precess user's commands from the promt/terminal

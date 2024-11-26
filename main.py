@@ -41,7 +41,7 @@ def enter_room():
     elif room_name == "Jeremy's Bakery":
         bakery_logic.start_bakery(current_room, items)
     elif room_name == "Florence's Flower Shop":
-        flowerShop_logic.start_flower_shop(current_room, items)
+        flowerShop_logic.start_flower_shop(current_room, items, game_state.collected_items)
     elif room_name == "Dina's Diner":
         restaurant_logic.start_restaurant(current_room)
     elif room_name == "Lore Library":
@@ -83,7 +83,7 @@ while True:
                 item.get_description()
             else:
                 print(f"Item '{parameter}' is not in your inventory.")
-    elif action in ["n", "s", "e", "w"]:
+    elif action in ["n", "s", "e", "w", "se"]:
         move_player(action)
     else:
         # Route the command to the specific room logic
