@@ -3,21 +3,21 @@
     {
       "id": 1,
       "name": "Phone",
-      "description": "",
+      "description": "There's a message from Jeremy: \n'I have a favor to ask! One of my workers fell sick. \nCan you pick up some last-minute groceries for me? I need...' \nYou can't make sense of the rest of the message. \nIt's probably best to speak to Jeremy in person.",
       "location": [1],
       "content": {}
     },
     {
       "id": 2,
       "name": "Keys",
-      "description": "",
+      "description": "These are the keys to my house.",
       "location": [1],
       "content": {}
     },
     {
       "id": 3,
       "name": "Wallet",
-      "description": "",
+      "description": "Just a few dollars, my ID, and cards.",
       "location": [1],
       "content": {}
     },
@@ -72,28 +72,28 @@
     {
       "id": 5,
       "name": "Sophia's Lavender Pie Recipe",
-      "description": "",
+      "description": "This recipe ought to be a trade secret!",
       "location": [7],
       "content": {}
     },
     {
       "id": 6,
       "name": "Camera battery",
-      "description": "",
+      "description": "A reliable camera battery, still full of life.",
       "location": [5],
       "content": {}
     },
     {
       "id": 7,
       "name": "Old bookmark",
-      "description": "",
+      "description": "Worn at the edges and faded with time.",
       "location": [5],
       "content": {}
     },
     {
       "id": 8,
-      "name": "Leaky ink pen",
-      "description": "",
+      "name": "Pen",
+      "description": "The ink is leaking. What a mess!",
       "location": [
         5
       ],
@@ -102,98 +102,98 @@
     {
       "id": 26,
       "name": "Tea",
-      "description": "A cup of tea served by Mrs. Smith for some afternoon tea",
+      "description": "A cup of tea served by Mrs. Smith for some afternoon tea.",
       "location": [6],
       "content": {}
     },
     {
       "id": 27,
       "name": "Box",
-      "description": "A box of various old items to go for donation",
+      "description": "A box of various old items to go for donation.",
       "location":[6],
       "content":{}
     },
     {
       "id": 28,
       "name": "Leash",
-      "description": "An old leash belonging to a dog the Smith's used to have",
+      "description": "An old leash belonging to a dog the Smith's used to have.",
       "location": [],
       "content": {}
     },
     {
       "id": 29,
       "name": "Camera",
-      "description": "A vintage camera from the Smith's younger years",
+      "description": "A vintage camera from the Smith's younger years.",
       "location":[],
       "content":{}
     },
     {
       "id": 30,
       "name": "Baseball Glove",
-      "description": "A baseball glove from when Mr. Smith used to play",
+      "description": "A baseball glove from when Mr. Smith used to play.",
       "location": [],
       "content": {}
     },
     {
       "id": 31,
       "name": "Doll",
-      "description": "A delicate porcelain doll that Mrs. Smith used to have on display",
+      "description": "A delicate porcelain doll that Mrs. Smith used to have on display.",
       "location": [],
       "content": {}
     },
     {
       "id": 32,
       "name": "Scarf",
-      "description": "An old scarf Mrs. Smith used to wear",
+      "description": "An old scarf Mrs. Smith used to wear.",
       "location": [],
       "content": {}
     },
     {
       "id": 100,
       "name": "Max",
-      "description": "Mrs. Davis' precious dog Max who you have helped look for! Time to bring him back to Mrs. Davis",
+      "description": "Poor guy, he must be so scared. I should return him to Mrs. Davis.",
       "location": [9],
       "content": {}
     },
     {
       "id": 9,
       "name": "Lavender",
-      "description": "",
+      "description": "Smells amazing.",
       "location": [3],
       "content": {}
     },
     {
       "id": 10,
       "name": "Out of This World! A guide to space book",
-      "description": "",
+      "description": "Nothing like a book on space to trigger my existentialism.",
       "location": [5],
       "content": {}
     },
     {
       "id": 11,
       "name": "Ctrl, Alt, Delight: A guide to computer science book",
-      "description": "",
+      "description": "A book on computer science. I don't get it at all!",
       "location": [5],
       "content": {}
     },
     {
       "id": 12,
       "name": "Brake It Down: A guide to cars book",
-      "description": "",
+      "description": "A book on cars. VROOM VROOM.",
       "location": [5],
       "content": {}
     },
     {
       "id": 13,
       "name": "Sew It Goes: A guide to fashion design book",
-      "description": "",
+      "description": "A book on fashion design.",
       "location": [5],
       "content": {}
     },
     {
       "id": 14,
       "name": "Weight a Minute: A guide to health and fitness book",
-      "description": "",
+      "description": "A book on health and fitness.",
       "location": [5],
       "content": {}
     },
