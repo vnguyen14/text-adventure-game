@@ -76,6 +76,8 @@ while True:
         # Check if the room has a custom command for 'inspect'
         if current_room.name == "Neighbour's House":
             neighbours_logic.neighbours_command(command, current_room, items, game_state)
+        elif current_room.name == "Jeremy's Bakery" and parameter == "phone":
+            print("You inspect your phone. There’s a new reminder: get a fresh bouquet of flowers for your tea date with the Smiths.")
         else:
             # Default inspect behavior for items
             item = next((item for item in items.values() if item.name.lower() == parameter.lower()), None)
