@@ -24,7 +24,7 @@
     {
       "id": 4,
       "name": "What in Carnations? A guide to flowers book",
-      "description": "Flower Type | Symbol | Scent  | Size   | Colour\n- Roses      | R      | Strong | Medium | Red\n- Gardenias  | G      | Strong | Large  | White\n- Daisies    | D      | Light  | Medium | White\n- Lavenders  | L      | Strong | Small  | Purple\n- Sunflowers | S      | Light  | Large  | Yellow\n- Tulips     | T      | Light  | Medium | Red\n- Hydrangeas | H      | Light  | Large  | Blue",
+      "description": "Flower Type  | Symbol | Scent  | Size   | Colour\n- Roses      | R      | Strong | Medium | Red\n- Gardenias  | G      | Strong | Large  | White\n- Daisies    | D      | Light  | Medium | White\n- Lavenders  | L      | Strong | Small  | Purple\n- Sunflowers | S      | Light  | Large  | Yellow\n- Tulips     | T      | Light  | Medium | Red\n- Hydrangeas | H      | Light  | Large  | Blue",
       "location": [3, 5],
       "content": {
         "R": {
