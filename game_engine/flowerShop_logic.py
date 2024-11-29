@@ -95,7 +95,7 @@ def help_florence():
     else:
         print("No riddle data found for this room.")
     
-    print("I know this is super confusing, especially for you. There is a book called 'What in Carnations? A guide to flowers', you can find it at the Lore Library. That book helped me a tons when I started learning about flowers. Maybe you could stop by the library to borrow as an assistance for this task?")
+    print("I know this is super confusing, especially for you. There is a book called \n'What in Carnations? A guide to flowers', you can find it at the Lore Library. \nThat book helped me a tons when I started learning about flowers. \nMaybe you could stop by the library to borrow as an assistance for this task?")
 
 
 

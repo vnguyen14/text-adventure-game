@@ -2,7 +2,7 @@
   "riddles": [
     {
       "id": 1,
-      "riddle": "I’m yellow and smooth, often spread on toast. I melt when it’s warm, and in batter, I boast.",
+      "riddle": "I'm yellow and smooth, often spread on toast. I melt when it's warm, and in batter, I boast.",
       "answers": ["butter"],
       "room_id": 2,
       "success_dialogues": ["You found Butter!"],
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "riddle": "I rise when it's hot, but I’m not alive. I come in different shapes, helping dough survive.",
+      "riddle": "I rise when it's hot, but I'm not alive. I come in different shapes, helping dough survive.",
       "answers": ["yeast"],
       "room_id": 2,
       "success_dialogues": ["You found Yeast!"],
@@ -30,7 +30,7 @@
     },
     {
       "id": 4,
-      "riddle": "I make things sweet. I’m often brown or white. In cookies, I thrive.",
+      "riddle": "I make things sweet. I'm often brown or white. In cookies, I thrive.",
       "answers": ["chocolate chips"],
       "room_id": 2,
       "success_dialogues": ["You found Chocolate Chips!"],
