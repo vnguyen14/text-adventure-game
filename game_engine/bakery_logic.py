@@ -1,8 +1,6 @@
+# game_engine/bakery_logic.py
 from Modules.riddle import Riddle
 from Modules.item import Item
-
-# Array to store collected items
-#collected_items = []
 
 # Start the bakery room
 def start_bakery(room, items):
@@ -10,6 +8,7 @@ def start_bakery(room, items):
     room.print_long_description()  # Print long description the first time
     available_items = Item.get_items_in_room(room.id, items)
     print(f"Items in this room: {[item.name for item in available_items]}")
+
 
 # Helper function to talk to Jeremy
 def talk_to_jeremy(room, game_state):
@@ -31,11 +30,10 @@ def talk_to_jeremy(room, game_state):
     else:
         print("No riddles found for this room.")
 
+
 # Helper function to solve riddles
 def solve_riddles(riddles, game_state):
     """Solve riddles sequentially."""
-    global collected_items
-
     for riddle in riddles:
         while True:
             print(f"Riddle: {riddle['riddle']}")
@@ -46,30 +44,21 @@ def solve_riddles(riddles, game_state):
                 break
             else:
                 print(riddle["failure_dialogues"][0] if riddle["failure_dialogues"] else "That's not correct. Try again.")
-    
+
     # Once all riddles are solved
     print("Congratulations! You have successfully solved all the riddles and got all the ingredients for the bakery!")
+    game_state.phone_message = "get a fresh bouquet of flowers for your tea date with the Smiths."
     print("Buzz! There’s a reminder on your phone.")
 
-# Helper function to take items
-def take_item(item_name, room, items, game_state):
-    """Handles taking an item in the bakery."""
-    available_items = Item.get_items_in_room(room.id, items)
-    item_names = {item.name.lower() for item in available_items}
-
-    if item_name.lower() in item_names:
-        if item_name.lower() not in game_state.collected_items:
-            game_state.collected_items.append(item_name.lower())
-            print(f"{item_name.capitalize()} is now in your bag!")
-        else:
-            print(f"You already have {item_name}.")
-    else:
-        print("Item not found in this room.")
 
 # Helper function to inspect the phone
-def inspect_phone():
+def inspect_phone(game_state):
     """Display the current phone reminder."""
-    print("You inspect your phone. There’s a new reminder: get a fresh bouquet of flowers for your tea date with the Smiths.")
+    if game_state.phone_message:
+        print(f"You inspect your phone. There's a new reminder: {game_state.phone_message}")
+    else:
+        print("Your phone has no new messages.")
+
 
 # Process commands for bakery room
 def process_bakery_command(command, room, items, game_state):
@@ -81,8 +70,6 @@ def process_bakery_command(command, room, items, game_state):
     if action == "talk" and item_name == "to jeremy":
         talk_to_jeremy(room, game_state)
     elif action == "inspect" and item_name == "phone":
-        inspect_phone()
-    elif action == "take" and item_name:
-        take_item(item_name, room, items, game_state)
+        inspect_phone(game_state)
     else:
         print("I don't understand that command.")
