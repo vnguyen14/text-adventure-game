@@ -24,8 +24,8 @@ def help_dina():
 def give_recipe(game_state):
     """Give Dina the recipe from Sophia"""
     global task_status
-    if items[5] in game_state.collected_items:
-        game_state.collected_items.remove(items[5])
+    if items[5].name in game_state.collected_items:
+        game_state.collected_items.remove(items[5].name)
         task_status = True
         print("Wow, I can't believe you did it! I was worried that the recipe was lost forever.")
     else:

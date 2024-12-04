@@ -1,7 +1,6 @@
 from Modules.room import Room
 from Modules.item import Item
 
-# collected_items = []
 items = Item.load_items('items.json')
 
 task_status = False
@@ -19,8 +18,8 @@ def talk_to_sophia():
 def give_lavender(game_state):
     """Give Sophia the lavender"""
     global task_status
-    if items[9] in game_state.collected_items and items[5] not in game_state.collected_items:
-        game_state.collected_items.remove(items[9])
+    if items[9].name in game_state.collected_items and items[5].name not in game_state.collected_items:
+        game_state.collected_items.remove(items[9].name)
         task_status = True
         print("Oh! Lavender! I can almost taste it! I used to steep it in the cream... and there was something about the honey... yes! It's all coming back now! Let me quickly jot it down for you.")   
     else:
@@ -28,9 +27,9 @@ def give_lavender(game_state):
 
 
 def take_recipe(game_state):
-    if items[5] not in game_state.collected_items and task_status == True:
-        game_state.collected_items.append(items[5])
-        print("You've added 'Sophia's lavender pie recipe' to your bag.") 
+    if items[5].name not in game_state.collected_items and task_status == True:
+        game_state.collected_items.append(items[5].name)
+        print(f"You've added {items[5].name} to your bag.") 
     else:
         print("You don't have access to the recipe.")
 
