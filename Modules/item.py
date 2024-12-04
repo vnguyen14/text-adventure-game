@@ -38,4 +38,4 @@ class Item:
     
     def get_description(self):
         # Print description of the item
-        print(self.description)
+        print("\n" + self.description + "\n")

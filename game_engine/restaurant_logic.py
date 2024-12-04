@@ -6,16 +6,6 @@ items = Item.load_items('items.json')
 
 task_status = False
 
-def start_restaurant(room):
-    """Prints the description of the restaurant."""
-    # if first time in room => long description
-    # if second time => short description
-    if room.first_time_in_room:
-        room.print_long_description()
-        room.change_first_time_status()
-    else:
-        room.print_short_description()
-
 def talk_to_dina():
     """Dialog with Dina"""
     # should have a global variable to track progress
@@ -29,7 +19,7 @@ def talk_to_dina():
 
 def help_dina():
     """Dina's hints for the task"""
-    print("Really? You’d do that? You can find her at the retirement home, but I’ve tried talking to her a few times. It’s hard for her to focus these days. They say smell can jog a person’s memory though… Let me know what she says!")
+    print("Really? You'd do that? You can find her at the retirement home, but I've tried talking to her a few times. It's hard for her to focus these days. They say smell can jog a person's memory though… Let me know what she says!")
 
 def give_recipe(game_state):
     """Give Dina the recipe from Sophia"""
@@ -37,7 +27,7 @@ def give_recipe(game_state):
     if items[5] in game_state.collected_items:
         game_state.collected_items.remove(items[5])
         task_status = True
-        print("Wow, I can’t believe you did it! I was worried that the recipe was lost forever.")
+        print("Wow, I can't believe you did it! I was worried that the recipe was lost forever.")
     else:
         print("You don't have the recipe to give.")
 
@@ -46,7 +36,7 @@ def process_restaurant_command(command,game_state):
     action = words[0]
     item_name = ' '.join(words[1:]) if len(words) > 1 else None
 
-    if action == "talk" and item_name == "dina":
+    if action == "talk" and item_name == "to dina":
         talk_to_dina()
     elif action == "help" and item_name == "dina":
         help_dina()

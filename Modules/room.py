@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+from Modules.item import Item
 
 class Room:
     def __init__(self, id, name, longDescription, shortDescription, connections):
@@ -32,19 +33,17 @@ class Room:
     # Method to print description
     def print_description(self):
         if self.first_time_in_room:
-            print(self.longDescription)
+            print("\n" + self.longDescription + "\n")
             self.first_time_in_room = False
         else:
-            print(self.shortDescription)
+            print("\n" + self.shortDescription + "\n")
 
-    # Method to print long description
-    def print_long_description(self):
-        print(self.longDescription)
-
-    # Method to print short description
-    def print_short_description(self):
-        print(self.shortDescription)
-
-    def change_first_time_status(self):
-        self.first_time_in_room = False
+    # Generic handler for starting any room.
+    def start_room(self, items=None):
+        self.print_description()  # Print long description
+        
+        # If items passed, then want to show items in room. Otherwise, hide items in room.
+        if items:
+            available_items = Item.get_items_in_room(self.id, items)
+            print(f"Items in this room: {[item.name for item in available_items]}\n")
 

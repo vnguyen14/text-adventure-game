@@ -17,10 +17,10 @@ def give_flowers(game_state):
     global flowers_delivered
 
     if flowers_delivered:
-        print("You have already given flowers to the Smiths.")
+        print("\nYou have already given flowers to the Smiths.\n")
         return
     if "hydrangeas" or "roses" not in game_state.collected_items:
-        print("You do not have any flowers to give to the Smiths.")
+        print("\nYou do not have any flowers to give to the Smiths.\n")
         return
     elif "hydrangeas" in game_state.collected_items:
         game_state.collected_items.remove("hydrangeas")
@@ -28,71 +28,60 @@ def give_flowers(game_state):
         game_state.collected_items.remove("roses")
     flowers_delivered = True
 
-    print("The Smiths are very happy to receive them.")
+    print("\nThe Smiths are very happy to receive them.\n")
 
 def take_tea():
     global tea_served
     if tea_served:
-        print("Mrs. Smith has already served you tea.")
+        print("\nMrs. Smith has already served you tea.\n")
         return
     tea_served = True
-    print("Mrs. Smith pours you some tea.")
+    print("\nMrs. Smith pours you some tea.\n")
 
 def talk_to_smiths():
     global box_offered
     if tea_served:
         if not box_offered:
-            print("You: This smells lovely. Thank you for your kindness Mrs. Smith.")
-            print("Mrs. Smith: Wonderful! I'm glad you like it. Oh and by the way, we cleaned the house\nthe past few days to clear up some of the clutter.\nWe kept some useful stuff in this box for donation.")
+            print("\nYou: This smells lovely. Thank you for your kindness Mrs. Smith.")
+            print("Mrs. Smith: Wonderful! I'm glad you like it. Oh and by the way, we cleaned the house\nthe past few days to clear up some of the clutter.\nWe kept some useful stuff in this box for donation.\n")
             box_offered = True
         else:
-            print("Have you taken a look at what's inside the box?")
+            print("\nHave you taken a look at what's inside the box?\n")
     else:
-        print("How about some tea?")
+        print("\nHow about some tea?\n")
 
 def take_box(game_state):
     if not tea_served:
-        print("Mrs. Smith: Why not sit down for some tea?")
+        print("\nMrs. Smith: Why not sit down for some tea?\n")
         return
     else:
         if "box" in game_state.collected_items:
-            print("You already have the box of old stuff from the Smiths with you.")
+            print("\nYou already have the box of old stuff from the Smiths with you.\n")
         else:
             game_state.collected_items.append("box")
-            print("Mrs. Smith hands you a small box filled with odd bits and ends.")
+            print("\nMrs. Smith hands you a small box filled with odd bits and ends.\n")
 
 def inspect_box(game_state):
     global box_emptied
     if box_emptied:
-        print("You have already taken out the items from the box Mrs. Smith gave to you.")
+        print("\nYou have already taken out the items from the box Mrs. Smith gave to you.\n")
     else:
         game_state.collected_items.extend(["leash", "camera", "baseball glove", "doll", "scarf"])
         box_emptied = True
-        print("You pull out an old leash, a vintage camera, a faded baseball glove, a delicate porcelain doll,\nand a cozy scarf. Each piece surely holds a story waiting to be discovered.")
-        print("Leash, Camera, Baseball Glove, Doll, Scarf are in your bag!")
+        print("\nYou pull out an old leash, a vintage camera, a faded baseball glove, a delicate porcelain doll,\nand a cozy scarf. Each piece surely holds a story waiting to be discovered.")
+        print("Leash, Camera, Baseball Glove, Doll, Scarf are in your bag!\n")
 
 def inspect_camera(game_state):
     if "camera" in game_state.collected_items:
-        print("This will surely help in capturing some memories on today's journey! But wait--it's missing a battery.")
+        print("\nThis will surely help in capturing some memories on today's journey! But wait--it's missing a battery.\n")
     else:
-        print("Are you sure you have one yet?")
+        print("\nAre you sure you have one yet?\n")
 
 def capture_camera(game_state):
     if "camera battery" not in game_state.collected_items:
-        print("Oh darn! The camera is missing a battery.")
+        print("\nOh darn! The camera is missing a battery.\n")
     else:
-        print("You took a picture of the scene in front of you.")
-
-def start_neighbours(room, items):
-    available_items = Item.get_items_in_room(room.id, items)
-    print(f"Items in this room: {[item.name for item in available_items]}")
-
-
-    if room.first_time_in_room:
-        room.print_long_description()
-        room.change_first_time_status()
-    else:
-        room.print_short_description()
+        print("\nYou take a picture of the scene in front of you.\n")
 
 # Process commands for neighbour room
 def neighbours_command(command, room, items,game_state):
@@ -105,14 +94,14 @@ def neighbours_command(command, room, items,game_state):
         if item_name == "to smiths":
             talk_to_smiths()
         else:
-            print("There's no one else in the room")
+            print("\nThere's no one else in the room.\n")
     elif action == "take":
         if item_name == "tea":
             take_tea()
         elif item_name == "box":
             take_box(game_state)
         else:
-            print("What are you trying to take?")
+            print("\nWhat are you trying to take?\n")
     elif action == "inspect":
         if item_name == "box":
             inspect_box(game_state)
@@ -126,7 +115,7 @@ def neighbours_command(command, room, items,game_state):
                 if item:
                     item.get_description()
             else:
-                print(f"Item '{item_name}' is not in your inventory.")
+                print(f"\nItem '{item_name}' is not in your inventory.\n")
     else:
-        print("Invalid action.")
+        print("\nInvalid action.\n")
 
