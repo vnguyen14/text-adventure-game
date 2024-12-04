@@ -1,16 +1,5 @@
-'''
-import sys
-import os
-
-# Add the project root directory to the Python path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-'''
-
 from Modules.room import Room
 from Modules.item import Item
-
-# Array to store all collected items from take action
-# collected_items = []
 
 # Helper function to talk to Mrs. Henderson
 def talk_to_mrs_henderson():
@@ -52,8 +41,8 @@ def take_item(item_name, available_items, game_state):
         print("\nSorry dear, I couldn't find that item in the library.\n")
 
 # Helper function to process user's commands from the prompt/terminal
-def process_library_command(command, library, items, game_state):
-    available_items = Item.get_items_in_room(library.id, items)
+def process_library_command(command, room, items, game_state):
+    available_items = Item.get_items_in_room(room.id, items)
     
     words = command.lower().split()
     action = words[0]

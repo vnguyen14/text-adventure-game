@@ -31,10 +31,11 @@ def give_recipe(game_state):
     else:
         print("You don't have the recipe to give.")
 
-def process_restaurant_command(command,game_state):
+def process_restaurant_command(command, current_room, items, game_state):
     words = command.lower().split()
     action = words[0]
     item_name = ' '.join(words[1:]) if len(words) > 1 else None
+  
 
     if action == "talk" and item_name == "to dina":
         talk_to_dina()
@@ -49,7 +50,7 @@ def process_restaurant_command(command,game_state):
     # # function for testing
 
     else:
-        print("I don't understand that command.")
+        print("\nI don't understand that command.\n")
 
 # # test
 # def take_recipe():

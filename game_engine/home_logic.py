@@ -45,7 +45,5 @@ def process_home_command(command, room, items, game_state):
 
     if action == "take" and item_name:
         take_item(item_name, room.id, items, game_state)
-    #elif action == "inspect" and item_name == "phone":
-    #    inspect_phone(game_state)
-    #else:
-    #    print("I don't understand that command.")
+    else:
+        print("\nI don't understand that command.\n")

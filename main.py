@@ -51,10 +51,13 @@ def enter_room():
     room_name = current_room.name
 
     # Match the room to its specific logic module
+    # These rooms should display the items in room when entering.
     if room_name in ("Home", "Jeremy's Bakery", "Neighbour's House"):
         Room.start_room(current_room, items)
+    # This room has special handling when entering room with flower book in inventory.
     elif room_name == "Florence's Flower Shop":
         flowerShop_logic.start_flower_shop(current_room, items, game_state.collected_items)
+    # Default room entry handling.
     else:
         Room.start_room(current_room)
 

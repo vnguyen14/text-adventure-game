@@ -78,4 +78,4 @@ def process_bakery_command(command, room, items, game_state):
     elif action == "take" and item_name:
         take_item(item_name, room, items, game_state)
     else:
-        print("I don't understand that command.")
+        print("\nI don't understand that command.\n")
