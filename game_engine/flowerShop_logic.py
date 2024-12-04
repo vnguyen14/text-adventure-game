@@ -2,6 +2,8 @@ from Modules.item import Item
 from Modules.riddle import Riddle
 from itertools import combinations
 
+items = Item.load_items('items.json')
+
 # Track the number of arrangements completed
 arrangement_count = 0
 
@@ -67,7 +69,8 @@ def solve_arrangement(arrangement, game_state):
             print("\nPerfect! We might just pull this off for the festival!")
             print("Thanks for all your help. Let me treat you to lunch. I have to finish these bouquets but head over to Dina's Diner. I'll let Dina know the bill is on me!")
             print("Oh and of course, here are some of today's most blooming flowers. I hope they make your day!")
-            game_state.collected_items.extend(["roses", "lavender", "hydrangeas"])
+            game_state.collected_items.extend(["roses", "hydrangeas"])
+            game_state.collected_items.append(items[9].name)
             print("\033[1mRoses, Lavender, and Hydrangeas are in your bag!\033[0m\n")
     else:
         print("\nSorry, that doesn't work!\n")
