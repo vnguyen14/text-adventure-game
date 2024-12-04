@@ -39,7 +39,7 @@ def process_retirementHome_command(command, current_room, items, game_state):
     action = words[0]
     item_name = ' '.join(words[1:]) if len(words) > 1 else None
 
-    if action == "talk to" and item_name == "sophia":
+    if action == "talk" and item_name == "to sophia":
         talk_to_sophia()
     elif action == "give" and item_name == "lavender":
         give_lavender(game_state)
