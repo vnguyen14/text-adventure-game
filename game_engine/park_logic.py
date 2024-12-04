@@ -1,23 +1,18 @@
 from Modules.room import Room
 from Modules.item import Item
 
-#collected_items = []
-
-def inspect_max():
-    print("Poor guy, he must be so scared. I should return him to Mrs. Davis.")
-
 def take_max(game_state):
     if "max" in game_state.collected_items:
-        print("Max has already joined your party.")
+        print("\nMax has already joined your party.\n")
         return
 
     if "leash" in game_state.collected_items:
-        print("You clip your leash onto Max's collar, ready to guide him back to safety.")
+        print("\nYou clip your leash onto Max's collar, ready to guide him back to safety.")
         print("Max has joined your party!")
-        print("Let's ask around to see where Mrs. Davis is.")
+        print("Let's ask around to see where Mrs. Davis is.\n")
         game_state.collected_items.append("max")
     else:
-        print("You'll need a leash.")
+        print("\nYou'll need a leash.\n")
 
 def process_park_command(command, room, items,game_state):
     words = command.lower().split()
@@ -27,5 +22,5 @@ def process_park_command(command, room, items,game_state):
     #if action == "inspect" and item_name == "max":
     #    inspect_max()
     if action == "take" and item_name == "max":
-        print(game_state.collected_items)
+        #print(game_state.collected_items)
         take_max(game_state)

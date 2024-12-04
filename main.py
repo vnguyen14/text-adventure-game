@@ -13,9 +13,24 @@ game_state = GameState()
 # Get the initial room (Home)
 global current_room
 current_room = next(room for room in rooms.values() if room.name == "Home")
-
 current_phone_message = None  # Global phone message
 
+# Room-specific logic handlers
+room_inspect_handlers = {
+    "Jeremy's Bakery": bakery_logic.process_bakery_command,
+    "Neighbour's House": neighbours_logic.neighbours_command,
+}
+
+room_command_handlers = {
+    "Home": home_logic.process_home_command,
+    "Jeremy's Bakery": bakery_logic.process_bakery_command,
+    "Florence's Flower Shop": flowerShop_logic.process_flower_shop_command,
+    "Lore Library": library_logic.process_library_command,
+    "Neighbour's House": neighbours_logic.neighbours_command,
+    "The Park": park_logic.process_park_command,
+    "Dina's Diner": restaurant_logic.process_restaurant_command,
+    "Retirement Home": retirementHome_logic.process_retirementHome_command,
+}
 
 # Function to handle movement between rooms
 def move_player(direction):
@@ -43,6 +58,14 @@ def enter_room():
     else:
         Room.start_room(current_room)
 
+def inspect_item(parameter):
+    """Handles the 'inspect' command."""
+    item = next((item for item in items.values() if item.name.lower() == parameter.lower()), None)
+    if parameter in game_state.collected_items:
+        item.get_description()
+    else:
+        print(f"\nItem '{parameter}' is not in your inventory.\n")
+
 # Start the game in the Home room
 enter_room()
 
@@ -63,37 +86,15 @@ while True:
         print("\nHere's what you have:\n- " + "\n- ".join(sorted(game_state.collected_items)) + "\n")
     elif action == "inspect":
         # Check if the room has a custom command for 'inspect'
-        if current_room.name == "Neighbour's House":
-            neighbours_logic.neighbours_command(command, current_room, items, game_state)
-        elif current_room.name == "Jeremy's Bakery":
-            bakery_logic.process_bakery_command(command, current_room, items, game_state)
+        if current_room.name in room_inspect_handlers:
+            room_inspect_handlers[current_room.name](command, current_room, items, game_state)
         else:
-            # Default inspect behavior for items
-            item = next((item for item in items.values() if item.name.lower() == parameter.lower()), None)
-            if parameter in game_state.collected_items:
-                item.get_description()
-            else:
-                print(f"\nItem '{parameter}' is not in your inventory.\n")
+            inspect_item(parameter)
     elif action in ["n", "s", "e", "w", "se"]:
         move_player(action)
     else:
-        # Route the command to the specific room logic
-        room_name = current_room.name
-        if room_name == "Home":
-            home_logic.process_home_command(command, current_room, items, game_state)
-        elif room_name == "Jeremy's Bakery":
-            bakery_logic.process_bakery_command(command, current_room, items, game_state)
-        elif room_name == "Florence's Flower Shop":
-            flowerShop_logic.process_flower_shop_command(command, current_room, items, game_state)
-        elif room_name == "Lore Library":
-            library_logic.process_library_command(command, current_room, items, game_state)
-        elif room_name == "Neighbour's House":
-            neighbours_logic.neighbours_command(command, current_room, items, game_state)
-        elif room_name == "The Park":
-            park_logic.process_park_command(command, current_room, items, game_state)
-        elif room_name == "Dina's Diner":
-            restaurant_logic.process_restaurant_command(command, current_room, items, game_state)
-        elif room_name == "Retirement Home":
-            retirementHome_logic.process_retirementHome_command(command, current_room, items, game_state)
+        handler = room_command_handlers.get(current_room.name)
+        if handler:
+            handler(command, current_room, items, game_state)
         else:
             print("Invalid command.")

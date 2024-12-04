@@ -13,15 +13,15 @@ def take_item(item_name, room_id, items, game_state):
         if item_name.lower() not in game_state.collected_items:
             game_state.collected_items.append(item_name.lower())
             location = "pocket" if item_name.lower() in ["keys", "phone"] else "bag"
-            print(f"{item_name.capitalize()} is in your {location}!")
+            print(f"\n{item_name.capitalize()} is in your {location}!\n")
         else:
-            print(f"You already have the {item_name}.")
+            print(f"\nYou already have the {item_name}.\n")
     else:
-        print("Item not found in this room.")
+        print("\nItem not found in this room.\n")
 
     #If all items are collected/taken, print message to start the day
     if all_items_collected(game_state):
-        print("Let's start the day! Buzz! There's a new message on your phone.")
+        print("Let's start the day! Buzz! There's a new message on your phone.\n")
 
 # Helper function to check if all items re collected/taken
 def all_items_collected(game_state):
@@ -34,7 +34,7 @@ def inspect_phone(game_state):
     if "phone" in game_state.collected_items:
         print("There's a message from Jeremy: \n'I have a favor to ask! One of my workers fell sick. \nCan you pick up some last-minute groceries for me? I need…' \nYou can't make sense of the rest of the message. \nIt's probably best to speak to Jeremy in person.'")
     else:
-        print("You don't have your phone yet!")
+        print("\nYou don't have your phone yet!\n")
 
 
 # Function to precess user's commands from the promt/terminal

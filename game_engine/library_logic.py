@@ -14,7 +14,7 @@ from Modules.item import Item
 
 # Helper function to talk to Mrs. Henderson
 def talk_to_mrs_henderson():
-    print("'Let me know if you need any help finding anything—books, supplies, equipment—anything!'")
+    print("\nLet me know if you need any help finding anything—books, supplies, equipment—anything!\n")
 
 def find_items(keyword=None, available_items=None):
     search_results = [
@@ -23,16 +23,16 @@ def find_items(keyword=None, available_items=None):
     ]
     if search_results:
         sorted_results = sorted(search_results)  # Sort the list alphabetically
-        print("Let me see what I can find! Here you go:\n- " + "\n- ".join(sorted_results))
+        print("\nLet me see what I can find! Here you go:\n- " + "\n- ".join(sorted_results) + "\n")
     else:
-        print("Sorry dear, I couldn't find anything matching that word.")
+        print("\nSorry dear, I couldn't find anything matching that word.\n")
 
 # Helper function to process 'take item' action
 def take_item(item_name, available_items, game_state):
     item_names = {item.name.lower(): item for item in available_items}  # Map item names to item objects
     if item_name.lower() in item_names:
         if item_name.lower() in game_state.collected_items:
-            print(f"'{item_name}' is in your bag!")
+            print(f"\n'{item_name}' is in your bag!\n")
         else:
             game_state.collected_items.append(item_name.lower())
             item = item_names[item_name.lower()]
@@ -40,16 +40,16 @@ def take_item(item_name, available_items, game_state):
             # Special interactions for specific items
             if item_name.lower() == "camera battery":
                 if "camera" in game_state.collected_items:
-                    print("You carefully slot it into the camera, and with a satisfying click, it powers on! Now, you're ready to capture moments throughout the game.")
+                    print("\nYou carefully slot it into the camera, and with a satisfying click, it powers on! Now, you're ready to capture moments throughout the game.\n")
                 else:
-                    print(f"'{item.name}' is in your bag! You'll need a camera to use this.")
+                    print(f"\n'{item.name}' is in your bag! You'll need a camera to use this.\n")
             elif item_name.lower() == "what in carnations? a guide to flowers":
-                print(f"'{item.name}' is in your bag! You can't wait to dive into its colourful pages.")
+                print(f"\n'{item.name}' is in your bag! You can't wait to dive into its colourful pages.\n")
             else:
                 # Default action for other items
-                print(f"'{item.name}' is in your bag!")
+                print(f"\n'{item.name}' is in your bag!\n")
     else:
-        print("Mrs. Henderson: Sorry dear, I couldn't find that item in the library.")
+        print("\nSorry dear, I couldn't find that item in the library.\n")
 
 # Helper function to process user's commands from the prompt/terminal
 def process_library_command(command, library, items, game_state):
@@ -59,11 +59,11 @@ def process_library_command(command, library, items, game_state):
     action = words[0]
     parameter = ' '.join(words[1:]) if len(words) > 1 else None
 
-    if action == "talk" and parameter == "mrs. henderson":
+    if action == "talk" and parameter == "to mrs. henderson":
         talk_to_mrs_henderson()
     elif action == "find":
         find_items(parameter or "", available_items)
     elif action == "take" and parameter:
         take_item(parameter, available_items, game_state)
     else:
-        print("I don't understand that command.")
+        print("\nI don't understand that command.\n")

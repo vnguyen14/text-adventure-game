@@ -68,7 +68,7 @@
       "id": 5,
       "name": "Lore Library",
       "longDescription": "You are in Lore Library. Towering shelves stretch from front to back, \nbrimming with centuries of knowledge and boundless imagination. \nThe inviting atmosphere encourages you to explore the countless stories waiting \nto be discovered. The quiet ambiance enhances the serenity of the space, \nmaking it a perfect haven for readers and dreamers alike. Near the front \ndoor, Mrs. Henderson, the librarian, expertly assists those seeking a specific title.",
-      "shortDescription": "You are in Lore Library. Mrs. Henderson, the librarian, skillfully helps \nvisitors find the titles they're looking for.",
+      "shortDescription": "You are in Lore Library. Mrs. Henderson, the librarian, skillfully helps visitors find the titles they're looking for.",
       "connections": [
         {
           "direction": "n",
