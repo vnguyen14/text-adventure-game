@@ -34,19 +34,19 @@ def take_recipe(game_state):
     else:
         print("You don't have access to the recipe.")
 
-def process_retirementHome_command(command, game_state):
+def process_retirementHome_command(command, current_room, items, game_state):
     words = command.lower().split()
     action = words[0]
     item_name = ' '.join(words[1:]) if len(words) > 1 else None
 
-    if action == "talk to" and item_name == "sophia":
+    if action == "talk" and item_name == "to sophia":
         talk_to_sophia()
     elif action == "give" and item_name == "lavender":
         give_lavender(game_state)
     elif action == "take" and item_name == "recipe":
         take_recipe(game_state)
     else:
-        print("I don't understand that command.")
+        print("\nI don't understand that command.\n")
 
 # def game_loop():
 #     """Check if everything is working in the room"""

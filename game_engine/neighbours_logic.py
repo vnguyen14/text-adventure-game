@@ -84,7 +84,7 @@ def capture_camera(game_state):
         print("\nYou take a picture of the scene in front of you.\n")
 
 # Process commands for neighbour room
-def neighbours_command(command, room, items,game_state):
+def neighbours_command(command, room, items, game_state):
     words = command.lower().split()
     action = words[0]
     item_name = ' '.join(words[1:]) if len(words) > 1 else None
@@ -117,5 +117,5 @@ def neighbours_command(command, room, items,game_state):
             else:
                 print(f"\nItem '{item_name}' is not in your inventory.\n")
     else:
-        print("\nInvalid action.\n")
+        print("\nI don't understand that command.\n")
 

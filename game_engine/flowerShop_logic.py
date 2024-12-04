@@ -130,4 +130,4 @@ def process_flower_shop_command(command, room, items, game_state):
         arrangement = ''.join(words[1:]).upper()
         solve_arrangement(arrangement,game_state)
     else:
-        print("I don't understand that command.")
+        print("\nI don't understand that command.\n")
