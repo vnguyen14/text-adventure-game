@@ -3,13 +3,6 @@ from Modules.item import Item
 
 #collected_items = []
 
-def start_park(room, items):
-    if room.first_time_in_room:
-        room.print_long_description()
-        room.change_first_time_status()
-    else:
-        room.print_short_description()
-
 def inspect_max():
     print("Poor guy, he must be so scared. I should return him to Mrs. Davis.")
 

@@ -3,14 +3,6 @@ from Modules.item import Item
 #Array to store all collected items from take action
 #collected_items = []
 
-# Start the room
-def start_home_room(room, items):
-    room.print_long_description() # print long description
-    # get and print all items available in this room
-    available_items = Item.get_items_in_room(room.id, items)
-    print(f"Items in this room: {[item.name for item in available_items]}")
-
-
 # Function to process 'take item' action
 def take_item(item_name, room_id, items, game_state):
     available_items = Item.get_items_in_room(room_id, items)

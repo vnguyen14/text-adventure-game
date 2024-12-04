@@ -10,11 +10,7 @@ def start_restaurant(room):
     """Prints the description of the restaurant."""
     # if first time in room => long description
     # if second time => short description
-    if room.first_time_in_room:
-        room.print_long_description()
-        room.change_first_time_status()
-    else:
-        room.print_short_description()
+    room.print_description()  # Print long description the first time
 
 def talk_to_dina():
     """Dialog with Dina"""

@@ -5,14 +5,6 @@ from Modules.item import Item
 items = Item.load_items('items.json')
 
 task_status = False
-def start_restaurant(room):
-    """Prints the description of the restaurant."""
-
-    if room.first_time_in_room:
-        room.print_long_description()
-        room.change_first_time_status()
-    else:
-        room.print_short_description()
 
 def talk_to_sophia():
     """Dialog with Dina"""
@@ -42,7 +34,7 @@ def take_recipe(game_state):
     else:
         print("You don't have access to the recipe.")
 
-def retirementHome_command(command, game_state):
+def process_retirementHome_command(command, game_state):
     words = command.lower().split()
     action = words[0]
     item_name = ' '.join(words[1:]) if len(words) > 1 else None
@@ -73,7 +65,7 @@ def retirementHome_command(command, game_state):
 #             print("Thanks for playing!")
 #             break
 #         else:
-#             retirementHome_command(command)
+#             process_retirementHome_command(command)
 
 
 # # Run the game

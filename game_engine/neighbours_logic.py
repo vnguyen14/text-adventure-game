@@ -83,17 +83,6 @@ def capture_camera(game_state):
     else:
         print("You took a picture of the scene in front of you.")
 
-def start_neighbours(room, items):
-    available_items = Item.get_items_in_room(room.id, items)
-    print(f"Items in this room: {[item.name for item in available_items]}")
-
-
-    if room.first_time_in_room:
-        room.print_long_description()
-        room.change_first_time_status()
-    else:
-        room.print_short_description()
-
 # Process commands for neighbour room
 def neighbours_command(command, room, items,game_state):
     words = command.lower().split()

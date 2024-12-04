@@ -67,7 +67,3 @@ def process_library_command(command, library, items, game_state):
         take_item(parameter, available_items, game_state)
     else:
         print("I don't understand that command.")
-
-# Start the room
-def start_library(current_room):
-    current_room.print_description()

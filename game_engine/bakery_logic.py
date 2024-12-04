@@ -4,13 +4,6 @@ from Modules.item import Item
 # Array to store collected items
 #collected_items = []
 
-# Start the bakery room
-def start_bakery(room, items):
-    """Handles the setup for entering the bakery."""
-    room.print_long_description()  # Print long description the first time
-    available_items = Item.get_items_in_room(room.id, items)
-    print(f"Items in this room: {[item.name for item in available_items]}")
-
 # Helper function to talk to Jeremy
 def talk_to_jeremy(room, game_state):
     """Handles interaction with Jeremy and solving riddles."""
@@ -69,7 +62,7 @@ def take_item(item_name, room, items, game_state):
 # Helper function to inspect the phone
 def inspect_phone():
     """Display the current phone reminder."""
-    print("You inspect your phone. There’s a new reminder: get a fresh bouquet of flowers for your tea date with the Smiths.")
+    print("\nYou inspect your phone. There's a new reminder: get a fresh bouquet of flowers for your tea date with the Smiths.\n")
 
 # Process commands for bakery room
 def process_bakery_command(command, room, items, game_state):

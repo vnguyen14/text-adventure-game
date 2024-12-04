@@ -17,11 +17,10 @@ def start_flower_shop(room, items, collected_items):
     global valid_arrangements
     global riddle_data
 
+    room.print_description()
     if ('what in carnations? a guide to flowers book' in collected_items):
-        room.print_short_description()
-        print("\n\n\033[1mFlorence: Oh, I see you got the book! Good luck!\033[0m")
-    else:
-        room.print_long_description()
+        print("\033[1mFlorence: Oh, I see you got the book! Good luck!\033[0m\n")
+    
     available_items = Item.get_items_in_room(room.id, items)
     riddle_data = Riddle.get_riddle_by_room(room.id)
     valid_arrangements = generate_valid_arrangements(room, available_items)
